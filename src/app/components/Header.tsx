@@ -2,12 +2,15 @@ import React from "react";
 import Image from "next/image";
 import logo from "public/logo.png";
 import { menu } from "../utils/data";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <header className="flex flex-col">
       <div className="flex justify-between w-[50%] m-auto items-center py-10">
-        <Image className="w-36" src={logo} alt="test" />
+        <Link href="/">
+          <Image className="w-36" src={logo} alt="test" />
+        </Link>
         <input
           type="text"
           className="border"

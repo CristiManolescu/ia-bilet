@@ -1,6 +1,7 @@
 {
   "events_results": [
     {
+      "id": "0",
       "title": "Concert Andra Gogan Craciunul in Roz",
       "artist": "Andra Gogan",
       "date": {
@@ -13,6 +14,7 @@
       "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/5a/6f/00000230766-1080-506x716-bmm-ded09ded.png"
     },
     {
+      "id": "1",
       "title": "Concert live de Craciun - Stefan Banica",
       "artist": "Stefan Banica",
       "date": {
@@ -25,6 +27,7 @@
       "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/66/fd/00000245677-e657-506x716-bmm-fb1b7abd.jpg"
     },
     {
+      "id": "2",
       "title": "Sibiu: Concert de colinde cu Fuego - “Am suflet de Craciun!” ora 19:00",
       "artist": "Fuego",
       "date": {
@@ -41,6 +44,7 @@
       "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/64/5e/00000243321-8cdd-506x716-bmm-00b0aed4.jpg"
     },
     {
+      "id": "3",
       "title": "Horia Brenciu - My Way SHOW 1",
       "artist": "Horia Brenciu",
       "date": {
@@ -49,7 +53,7 @@
         "time": "19:300"
       },
       "address": ["Sala Palatului", "Strada Ion Câmpineanu 28", "Bucuresti"],
-      "description": "Horia Brenciu, trei concerte aniversare în noiembrie la Sala Palatului! Celebrul showman și cântăreț Horia Brenciu va avea concerte retrospective, la Sala Palatului din București, pe 24, 25 si 26 noiembrie.",
+      "description": "Trei concerte aniversare în noiembrie la Sala Palatului! Celebrul showman și cântăreț Horia Brenciu va avea concerte retrospective, la Sala Palatului din București, pe 24, 25 si 26 noiembrie.",
       "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/3c/02/00000241736-035a-506x716-bmm-b5c353b5.png"
     }
   ]

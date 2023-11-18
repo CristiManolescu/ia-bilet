@@ -4,6 +4,7 @@ import React from "react";
 import useEvents from "../hooks/useEvents";
 import { useAppSelector } from "../redux/store";
 import EventCard from "./EventCard";
+import Link from "next/link";
 
 const MainPage = () => {
   useEvents();
@@ -18,12 +19,16 @@ const MainPage = () => {
       </div>
       <div className="flex flex-wrap">
         {events.map((event) => (
-          <EventCard
+          <Link
             key={event.title}
-            image={event.image}
-            title={event.title}
-          />
-        ))}
+            href={{
+              pathname: `/iabilet/${event.title}`,
+              query: { id: event.id },
+            }}
+          >
+            <EventCard image={event.image} title={event.title} />
+          </Link>
+        ))}{" "}
       </div>
     </section>
   );

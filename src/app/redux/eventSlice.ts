@@ -9,6 +9,7 @@ interface EventProps {
     weekday: string;
   };
   description: string;
+  id: number;
   image: string;
   title: string;
 }
