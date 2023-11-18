@@ -17,14 +17,13 @@ const Page = ({ params }: Props) => {
   useEvents();
   const events = useAppSelector((store) => store.event.allEvents);
   const event = events[id];
-  console.log(event);
 
   return (
-    <div className="flex w-[50%] m-auto py-4">
-      <div>
+    <div className="flex flex-col md:flex-row md:w-[60%] m-auto py-4 bg-white rounded-b-lg shadow-lg items-center md:items-stretch">
+      <div className="md:w-[30%] md:pl-4">
         <Image src={event.image} alt="poster" width="245" height="347" />
       </div>
-      <div className="p-2 m-2">
+      <div className="md:w-[70%] py-2 my-2 text-sm md:pr-32">
         <h1 className="text-3xl">{decodeURIComponent(params.name)}</h1>
         <div className="flex my-6">
           <FaLocationDot className="mr-4" />
@@ -43,7 +42,7 @@ const Page = ({ params }: Props) => {
             </p>
           </div>
         </div>
-        <div className="w-[50%]">
+        <div>
           {event.artist} - {event.description}
         </div>
       </div>

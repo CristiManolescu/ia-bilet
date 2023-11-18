@@ -5,6 +5,7 @@ import useEvents from "../hooks/useEvents";
 import { useAppSelector } from "../redux/store";
 import EventCard from "./EventCard";
 import Link from "next/link";
+import { IoTicket } from "react-icons/io5";
 
 const MainPage = () => {
   useEvents();
@@ -12,12 +13,15 @@ const MainPage = () => {
   if (events.length === 0) return null;
 
   return (
-    <section className="flex flex-col w-[50%] m-auto py-4">
-      <div>
-        LIDER DE PIAȚĂ ÎN TICKETING. ACUM: {events.length} EVENIMENTE DIN {}{" "}
-        ORAȘE
+    <section className="flex flex-col w-[60%] m-auto py-4 bg-white rounded-b-lg shadow-lg">
+      <div className="flex items-center">
+        <IoTicket className="mr-1" />
+        <p className="text-lg font-light text-black/40">
+          LIDER DE PIAȚĂ ÎN TICKETING. ACUM: {events.length} EVENIMENTE DIN 128
+          ORAȘE
+        </p>
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-center">
         {events.map((event) => (
           <Link
             key={event.title}

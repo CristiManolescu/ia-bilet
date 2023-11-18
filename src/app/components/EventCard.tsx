@@ -12,8 +12,14 @@ const EventCard = (props: ExportCardProps) => {
   const shortTitle = short(title);
 
   return (
-    <div className="mr-4 py-4">
-      <Image src={image} alt={title} width="145" height="200" />
+    <div className="py-4 mr-4">
+      <Image
+        src={image}
+        alt={title}
+        width="145"
+        height="200"
+        className="transform hover:scale-105"
+      />
       <h1 className="w-[145px] font-bold text-gray-700">{shortTitle}</h1>
     </div>
   );
