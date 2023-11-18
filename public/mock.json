@@ -1,0 +1,56 @@
+{
+  "events_results": [
+    {
+      "title": "Concert Andra Gogan Craciunul in Roz",
+      "artist": "Andra Gogan",
+      "date": {
+        "day": "1 decembrie",
+        "weekday": "vineri",
+        "time": "18:00"
+      },
+      "address": ["Sala Palatului", "Strada Ion Câmpineanu 28", "Bucuresti"],
+      "description": "Cea mai urmarita artista din România (cu peste 3 milioane de abonati pe youtube si peste 1,2 miliarde de vizualizari) – continua traditia cu un super-concert la Sala Palatului in data de 1 Decembrie, ora 18:00.Vino pe 1 Decembrie 2023 să te întâlnesti cu Andra si Razvan Gogan la Sala Palatului, să cânti, sa dansezi, să te distrezi și să te încarci cu energie!Ia-ți din timp biletul la concert si meet&greet și participă la un super concert de Craciun alături de Andra Gogan și învitații ei.Earlybird: Primele 200 de bilete cumparate, indiferent de categorie, au o reducere de 20% din pretul de baza. Biletele se pun in vanzare sambata, 26 august, ora 18:00.",
+      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/5a/6f/00000230766-1080-506x716-bmm-ded09ded.png"
+    },
+    {
+      "title": "Concert live de Craciun - Stefan Banica",
+      "artist": "Stefan Banica",
+      "date": {
+        "day": "7 decembrie",
+        "weekday": "joi",
+        "time": "19:30"
+      },
+      "address": ["Sala Palatului", "Strada Ion Câmpineanu 28", "Bucuresti"],
+      "description": "20 de ani de excelență la Sala Palatului: Fenomenul “Concert LIVE de Crăciun - ȘTEFAN BĂNICĂ“ 8, 9, 10 decembrie. La cererea publicul, al IV lea spectacol pe 7 decembrie.",
+      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/66/fd/00000245677-e657-506x716-bmm-fb1b7abd.jpg"
+    },
+    {
+      "title": "Sibiu: Concert de colinde cu Fuego - “Am suflet de Craciun!” ora 19:00",
+      "artist": "Fuego",
+      "date": {
+        "day": "2 decembrie",
+        "weekday": "sambata",
+        "time": "19:00"
+      },
+      "address": [
+        "Centrul Cultural Ion Besoiu",
+        "str. Emil Cioran, nr. 1A",
+        "Sibiu"
+      ],
+      "description": "Înconjurați-vă de farmecul sărbătorilor la concertul “Suflet de Crăciun” alături de una din cele mai cunoscute si iubite voci din România! Într-o atmosferă intimă și plină de emoție, artistul ne va încălzi inimile cu cele mai frumoase colinde și melodii festive. Cu multă bucurie în suflet, vă invităm să luați Ia parte la această experiență memorabilă pentru a marca perioadă magică, din preajma Crăciunului, într-un mod cu totul aparte!",
+      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/64/5e/00000243321-8cdd-506x716-bmm-00b0aed4.jpg"
+    },
+    {
+      "title": "Horia Brenciu - My Way SHOW 1",
+      "artist": "Horia Brenciu",
+      "date": {
+        "day": "24 noiembrie",
+        "weekday": "vineri",
+        "time": "19:300"
+      },
+      "address": ["Sala Palatului", "Strada Ion Câmpineanu 28", "Bucuresti"],
+      "description": "Horia Brenciu, trei concerte aniversare în noiembrie la Sala Palatului! Celebrul showman și cântăreț Horia Brenciu va avea concerte retrospective, la Sala Palatului din București, pe 24, 25 si 26 noiembrie.",
+      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/3c/02/00000241736-035a-506x716-bmm-b5c353b5.png"
+    }
+  ]
+}
