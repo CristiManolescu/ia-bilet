@@ -11,7 +11,17 @@
       },
       "address": ["Sala Palatului", "Strada Ion Câmpineanu 28", "Bucuresti"],
       "description": "Cea mai urmarita artista din România (cu peste 3 milioane de abonati pe youtube si peste 1,2 miliarde de vizualizari) – continua traditia cu un super-concert la Sala Palatului in data de 1 Decembrie, ora 18:00.Vino pe 1 Decembrie 2023 să te întâlnesti cu Andra si Razvan Gogan la Sala Palatului, să cânti, sa dansezi, să te distrezi și să te încarci cu energie!Ia-ți din timp biletul la concert si meet&greet și participă la un super concert de Craciun alături de Andra Gogan și învitații ei.Earlybird: Primele 200 de bilete cumparate, indiferent de categorie, au o reducere de 20% din pretul de baza. Biletele se pun in vanzare sambata, 26 august, ora 18:00.",
-      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/5a/6f/00000230766-1080-506x716-bmm-ded09ded.png"
+      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/5a/6f/00000230766-1080-506x716-bmm-ded09ded.png",
+      "tickets": [
+        {
+          "name": "Bilet 1",
+          "price": 290
+        },
+        {
+          "name": "VIP",
+          "price": 590
+        }
+      ]
     },
     {
       "id": "1",
@@ -24,7 +34,17 @@
       },
       "address": ["Sala Palatului", "Strada Ion Câmpineanu 28", "Bucuresti"],
       "description": "20 de ani de excelență la Sala Palatului: Fenomenul “Concert LIVE de Crăciun - ȘTEFAN BĂNICĂ“ 8, 9, 10 decembrie. La cererea publicul, al IV lea spectacol pe 7 decembrie.",
-      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/66/fd/00000245677-e657-506x716-bmm-fb1b7abd.jpg"
+      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/66/fd/00000245677-e657-506x716-bmm-fb1b7abd.jpg",
+      "tickets": [
+        {
+          "name": "VIP 1",
+          "price": 300
+        },
+        {
+          "name": "MVP",
+          "price": 590
+        }
+      ]
     },
     {
       "id": "2",
@@ -41,7 +61,17 @@
         "Sibiu"
       ],
       "description": "Înconjurați-vă de farmecul sărbătorilor la concertul “Suflet de Crăciun” alături de una din cele mai cunoscute si iubite voci din România! Într-o atmosferă intimă și plină de emoție, artistul ne va încălzi inimile cu cele mai frumoase colinde și melodii festive. Cu multă bucurie în suflet, vă invităm să luați Ia parte la această experiență memorabilă pentru a marca perioadă magică, din preajma Crăciunului, într-un mod cu totul aparte!",
-      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/64/5e/00000243321-8cdd-506x716-bmm-00b0aed4.jpg"
+      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/64/5e/00000243321-8cdd-506x716-bmm-00b0aed4.jpg",
+      "tickets": [
+        {
+          "name": "VIP 1",
+          "price": 300
+        },
+        {
+          "name": "MVP",
+          "price": 590
+        }
+      ]
     },
     {
       "id": "3",
@@ -54,7 +84,17 @@
       },
       "address": ["Sala Palatului", "Strada Ion Câmpineanu 28", "Bucuresti"],
       "description": "Trei concerte aniversare în noiembrie la Sala Palatului! Celebrul showman și cântăreț Horia Brenciu va avea concerte retrospective, la Sala Palatului din București, pe 24, 25 si 26 noiembrie.",
-      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/3c/02/00000241736-035a-506x716-bmm-b5c353b5.png"
+      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/3c/02/00000241736-035a-506x716-bmm-b5c353b5.png",
+      "tickets": [
+        {
+          "name": "VIP 1",
+          "price": 300
+        },
+        {
+          "name": "MVP",
+          "price": 590
+        }
+      ]
     },
     {
       "id": "4",
@@ -67,7 +107,17 @@
       },
       "address": ["Epava", "Plaja Costinesti", "Costinesti"],
       "description": "Va fi la un cu totul alt nivel! Cei mai mari artisti ai lumii vor veni pe plaja din Costinesti! Hai sa le aratam ca romanii stiu sa se distreze cel mai bine!",
-      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/4e/8b/00000234675-203d-800x800-n-705c0d03.jpg"
+      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/4e/8b/00000234675-203d-800x800-n-705c0d03.jpg",
+      "tickets": [
+        {
+          "name": "VIP 1",
+          "price": 300
+        },
+        {
+          "name": "MVP",
+          "price": 590
+        }
+      ]
     },
     {
       "id": "5",
@@ -80,7 +130,17 @@
       },
       "address": ["Epava", "Plaja Costinesti", "Costinesti"],
       "description": "După organizarea primului festival de trap din România în 2021, un turneu național în 10 orașe și o ediție de iarnă la Azuga, Hustle Festival revine în forță, acaparând plaja din Costinești pe 26-28 aprilie 2024!",
-      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/5e/c6/00000237356-561f-800x800-n-a65658a4.jpg"
+      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/5e/c6/00000237356-561f-800x800-n-a65658a4.jpg",
+      "tickets": [
+        {
+          "name": "VIP 1",
+          "price": 300
+        },
+        {
+          "name": "MVP",
+          "price": 590
+        }
+      ]
     },
     {
       "id": "6",
@@ -93,7 +153,17 @@
       },
       "address": ["Sala Palatului", "Strada Ion Câmpineanu 28", "Bucuresti"],
       "description": "Una dintre personalitățile cele mai active în popularizarea științei la scară globală, profesor de fizica particulelor la Universitatea din Manchester și figură emblematică a BBC, Brian Cox pune România pe harta celui mai recent turneu al său printr-un eveniment unic desfășurat pe 3 aprilie 2024 la Sala Palatului: Horizons – A 21st Century Space Odyssey.",
-      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/5e/ea/00000238333-bef3-506x716-bmm-c6e0a836.jpg"
+      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/5e/ea/00000238333-bef3-506x716-bmm-c6e0a836.jpg",
+      "tickets": [
+        {
+          "name": "VIP 1",
+          "price": 300
+        },
+        {
+          "name": "MVP",
+          "price": 590
+        }
+      ]
     },
     {
       "id": "7",
@@ -106,7 +176,17 @@
       },
       "address": ["Sala Palatului", "Strada Ion Câmpineanu 28", "Bucuresti"],
       "description": "Dupa prezenta la Metalhead Meeting, pe 8 aprilie VV revine la Bucuresti la Sala Palatului. Primele 200 de bilete au pret earlybird. Invitati sunt ZETRA (UK). La minim 4 bilete cumparate ai discount 10%.",
-      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/58/68/00000232204-5b89-800x800-n-22e049b0.jpg"
+      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/58/68/00000232204-5b89-800x800-n-22e049b0.jpg",
+      "tickets": [
+        {
+          "name": "VIP 1",
+          "price": 300
+        },
+        {
+          "name": "MVP",
+          "price": 590
+        }
+      ]
     },
     {
       "id": "8",
@@ -123,7 +203,17 @@
         "Constanta"
       ],
       "description": "te asteapta la Casa de Cultura a Sindicatelor Constanta pe 15 Decembrie, la cel mai mare concert al iernii, White Christmas . Îmbracă-te în alb si vino si tu sa te distrezi, sa canti si sa te încarci cu energie alături de Iuliana si cei mai cool invitați speciali, pe 15 Decembrie, la Casa de Cultura a Sindicatelor la un mega concert cu mega cadouri…pentru voi.",
-      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/62/5c/00000241441-db2e-800x800-n-45f09511.jpg"
+      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/62/5c/00000241441-db2e-800x800-n-45f09511.jpg",
+      "tickets": [
+        {
+          "name": "VIP 1",
+          "price": 300
+        },
+        {
+          "name": "MVP",
+          "price": 590
+        }
+      ]
     },
     {
       "id": "9",
@@ -140,7 +230,17 @@
         "Bucuresti"
       ],
       "description": "lansează albumul ”Flex” în cadrul unui eveniment unic la MINA Museum! Așteptarea a luat sfârșit și fanii Deliei se pot bucura de noul album ”Flex” pe care artista îl va lansa pe 21 noiembrie și care include 13 piese, printre care ”SKNDL” feat. HVNDS, ”Gustul care te fură”, super hiturile OTZL GLTZ și ”Lololo”, dar și „Sirena Apelor” și ”Fără Te merau” cu Connect-R, dar și colaborări surpriză.",
-      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/63/39/00000242294-687f-800x800-n-f02035ab.jpg"
+      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/63/39/00000242294-687f-800x800-n-f02035ab.jpg",
+      "tickets": [
+        {
+          "name": "VIP 1",
+          "price": 300
+        },
+        {
+          "name": "MVP",
+          "price": 590
+        }
+      ]
     },
     {
       "id": "10",
@@ -153,7 +253,17 @@
       },
       "address": ["Sala Palatului", "Strada Ion Câmpineanu 28", "Bucuresti"],
       "description": "Dragii nostri, pentru că a mai rămas puțin peste o lună până la concertul de la Sala Palatului, e timpul să vă dezvăluim una din surprizele pe care vi le pregătim. Este vorba despre un vis pe care probabil orice muzician îl are, un vis care se împlinește în sfârșit. Pe 28 noiembrie sustinem în premiera ‼ 3 Sud Est Simfonic ‼ la Sala Palatului. Suntem extrem de entuziasmați să cântăm cu o orchestra simfonică. Forța care vine cu acompaniamentul orchestrei este unică, iar piesele capătă o profunzime aparte.",
-      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/51/a8/00000240811-67d6-800x800-n-c173d0a8.jpg"
+      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/51/a8/00000240811-67d6-800x800-n-c173d0a8.jpg",
+      "tickets": [
+        {
+          "name": "VIP 1",
+          "price": 300
+        },
+        {
+          "name": "MVP",
+          "price": 590
+        }
+      ]
     },
     {
       "id": "11",
@@ -166,7 +276,17 @@
       },
       "address": ["Sala Palatului", "Strada Ion Câmpineanu 28", "Bucuresti"],
       "description": "impreuna cu Mihai Rait urca si in acest acest an pe scena Salii Palatului din București cu un nou numar de stand up comedy.",
-      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/60/4e/00000239599-7648-800x800-n-59439cea.jpg"
+      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/60/4e/00000239599-7648-800x800-n-59439cea.jpg",
+      "tickets": [
+        {
+          "name": "VIP 1",
+          "price": 300
+        },
+        {
+          "name": "MVP",
+          "price": 590
+        }
+      ]
     }
   ]
 }

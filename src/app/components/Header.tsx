@@ -5,11 +5,14 @@ import logo from "public/logo.png";
 import { menu } from "../utils/data";
 import Link from "next/link";
 import { CiSearch } from "react-icons/ci";
+import { IoIosCart } from "react-icons/io";
+import { useAppSelector } from "../redux/store";
 
 const Header = () => {
+  const cart = useAppSelector((store) => store.cart.cartItems);
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log("pl");
   };
 
   return (
@@ -28,9 +31,18 @@ const Header = () => {
             <CiSearch />
           </button>
         </form>
-        <div className="flex gap-4">
+        <div className="flex items-center gap-4 text-sm">
           <p>Contul meu</p>
           <p>Limba</p>
+          <Link href="/cart">
+            <div className="relative flex">
+              <IoIosCart className="text-2xl" />
+
+              <p className="absolute right-0 p-[1px] text-xs text-white bg-red-600 rounded-full">
+                {cart.length !== 0 && cart[0].totalTicketsCount}
+              </p>
+            </div>
+          </Link>
         </div>
       </div>
       <div className="flex justify-center bg-gray-100">
