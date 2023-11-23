@@ -31,11 +31,6 @@ const Page = ({ params }: Props) => {
 
   if (id !== null) event = events[id];
 
-  type TestProps = {
-    eventName: string;
-    ticket1: string;
-  };
-
   const handleAdd = () => {
     setItems([
       {

@@ -7,6 +7,8 @@ import Link from "next/link";
 import { CiSearch } from "react-icons/ci";
 import { IoIosCart } from "react-icons/io";
 import { useAppSelector } from "../redux/store";
+import { onAuthStateChanged } from "firebase/auth"; // actiuni daca userul are sesiune activa
+import LoggedUserMenu from "./LoggedUserMenu";
 
 const Header = () => {
   const cart = useAppSelector((store) => store.cart.cartItems);
@@ -32,14 +34,14 @@ const Header = () => {
           </button>
         </form>
         <div className="flex items-center gap-4 text-sm">
-          <p>Contul meu</p>
+          <LoggedUserMenu />
           <p>Limba</p>
           <Link href="/cart">
             <div className="relative flex">
               <IoIosCart className="text-2xl" />
 
               <p className="absolute right-0 p-[1px] text-xs text-white bg-red-600 rounded-full">
-                {cart.length !== 0 && cart[0].totalTicketsCount}
+                {/* {cart.length !== 0 && cart[0].totalTicketsCount} */}
               </p>
             </div>
           </Link>

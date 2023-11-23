@@ -13,7 +13,7 @@ const MainPage = () => {
   if (events.length === 0) return null;
 
   return (
-    <section className="flex flex-col w-[60%] m-auto py-4 bg-white rounded-b-lg shadow-lg">
+    <section className="flex flex-col py-4 rounded-b-lg shadow-lg">
       <div className="flex items-center">
         <IoTicket className="mr-1" />
         <p className="text-lg font-light text-black/40">

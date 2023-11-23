@@ -10,3 +10,8 @@ export const menu = [
   "Sport",
   "Conferinte",
 ] as const;
+
+export const accMenu = {
+  notLogged: ["Intra in cont", "Cont nou"],
+  logged: ["Biletele mele", "Vouchere", "Schimba parola", "Deconectare"],
+} as const;

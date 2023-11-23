@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 interface CartProps {
-  eventName: string | null;
+  eventName: string;
   count: number;
   count2: number;
 }
