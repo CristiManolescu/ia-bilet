@@ -23,6 +23,7 @@ const LoggedUserMenu = () => {
     signOut(auth).then(() => {
       router.push("/account?action=Intra+in+cont");
     });
+    setShowMenu(!showMenu);
   };
 
   useOutsideClick(ref, setShowMenu);
@@ -30,7 +31,7 @@ const LoggedUserMenu = () => {
   return (
     <div>
       <div onClick={handleClick} className="relative cursor-pointer">
-        {user ? `Salut ${user.displayName}` : "Contul meu"}
+        {user ? `Salut, ${user.displayName}` : "Contul meu"}
       </div>
       <div ref={ref}>
         {showMenu && (
