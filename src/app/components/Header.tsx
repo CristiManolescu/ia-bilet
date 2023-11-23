@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import logo from "public/logo.png";
 import { menu } from "../utils/data";
@@ -9,9 +9,37 @@ import { IoIosCart } from "react-icons/io";
 import { useAppSelector } from "../redux/store";
 import { onAuthStateChanged } from "firebase/auth"; // actiuni daca userul are sesiune activa
 import LoggedUserMenu from "./LoggedUserMenu";
+import { auth } from "../utils/firebase";
+import { useDispatch } from "react-redux";
+import { useRouter } from "next/navigation";
+import { addUser, removeUser } from "../redux/userSlice";
 
 const Header = () => {
-  const cart = useAppSelector((store) => store.cart.cartItems);
+  //  const cart = useAppSelector((store) => store.cart.cartItems);
+  const router = useRouter();
+  const dispatch = useDispatch();
+  const user = useAppSelector((store) => store.user);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const { uid, email, displayName } = user;
+        dispatch(
+          addUser({
+            uid: uid,
+            email: email,
+            displayName: displayName,
+          })
+        );
+        router.push("/");
+      } else {
+        dispatch(removeUser());
+        router.push("/");
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

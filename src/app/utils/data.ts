@@ -13,5 +13,5 @@ export const menu = [
 
 export const accMenu = {
   notLogged: ["Intra in cont", "Cont nou"],
-  logged: ["Biletele mele", "Vouchere", "Schimba parola", "Deconectare"],
+  logged: "Deconectare",
 } as const;

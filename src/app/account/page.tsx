@@ -1,27 +1,70 @@
 "use client";
 
-import React, { SyntheticEvent, useEffect, useState } from "react";
+import React, { SyntheticEvent, useEffect, useState, useRef } from "react";
 import { useSearchParams } from "next/navigation";
+import { useDispatch } from "react-redux";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  updateProfile,
+} from "firebase/auth";
+import { auth } from "../utils/firebase";
+import { addUser } from "../redux/userSlice";
 
 const Account = () => {
   const [logInForm, setLogInForm] = useState<boolean>(true);
+  const name = useRef<HTMLInputElement | null>(null);
+  const email = useRef<HTMLInputElement | null>(null);
+  const password = useRef<HTMLInputElement | null>(null);
+  const dispatch = useDispatch();
+
   const searchParams = useSearchParams();
   const action = searchParams.get("action");
-
-  const handleSubmit = (
-    event: SyntheticEvent<HTMLFormElement, SubmitEvent>
-  ) => {
-    event.preventDefault();
-  };
-
-  const handleChangeForm = () => {
-    setLogInForm(!logInForm);
-  };
 
   useEffect(() => {
     action === "Cont nou" ? setLogInForm(false) : setLogInForm(true);
   }, [action]);
 
+  const handleSubmit = (
+    event: SyntheticEvent<HTMLFormElement, SubmitEvent>
+  ) => {
+    event.preventDefault();
+    if (!logInForm) {
+      createUserWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      ).then((userCredential) => {
+        const user = userCredential.user;
+        updateProfile(user, {
+          displayName: name.current.value,
+        }).then(() => {
+          const { uid, email, displayName } = auth.currentUser;
+          dispatch(
+            addUser({
+              uid: uid,
+              email: email,
+              displayName: displayName,
+            })
+          );
+        });
+      });
+    } else {
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {})
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  };
+
+  const handleChangeForm = () => {
+    setLogInForm(!logInForm);
+  };
   return (
     <div className="flex flex-col justify-center items-center bg-white w-[60%] m-auto rounded-b-lg shadow-lg pt-4">
       <h1 className="text-2xl font-bold">
@@ -37,17 +80,20 @@ const Account = () => {
             type="text"
             placeholder="Nume complet"
             className="w-full rounded-md p-2 m-2 border border-black/50"
+            ref={name}
           />
         )}
         <input
           type="text"
           placeholder="Adresa de e-mail"
           className="w-full rounded-md p-2 m-2 border border-black/50"
+          ref={email}
         />
         <input
           type="password"
           placeholder="Parola"
           className="w-full rounded-md p-2 m-2 border border-black/50"
+          ref={password}
         />
         <button
           type="submit"
