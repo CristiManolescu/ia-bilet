@@ -101,7 +101,10 @@ const Account = () => {
         >
           {logInForm ? "Conectaza-te" : "Inregistreaza-te"}
         </button>
-        <p className="text-sm cursor-pointer" onClick={handleChangeForm}>
+        <p
+          className="text-sm cursor-pointer text-blue-500"
+          onClick={handleChangeForm}
+        >
           {logInForm
             ? "Nu ai un cont? Inregistreaza-te acum!"
             : "Ai deja cont? Conecteaza-te acum!"}
