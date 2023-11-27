@@ -31,12 +31,14 @@ const LoggedUserMenu = () => {
   return (
     <div>
       <div onClick={handleClick} className="relative cursor-pointer">
-        {user ? `Salut, ${user.displayName}` : "Contul meu"}
+        {user.displayName !== null
+          ? `Salut, ${user.displayName}`
+          : "Contul meu"}
       </div>
       <div ref={ref}>
         {showMenu && (
           <ul className="absolute border border-black/70 p-1 rounded-lg shadow-lg">
-            {!user ? (
+            {user.displayName === null ? (
               accMenu?.notLogged?.map((menu) => (
                 <Link
                   key={menu}

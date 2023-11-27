@@ -10,12 +10,14 @@ import {
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { addUser } from "../redux/userSlice";
+import { checkValidData } from "../utils/checkValidData";
 
 const Account = () => {
   const [logInForm, setLogInForm] = useState<boolean>(true);
-  const name = useRef<HTMLInputElement | null>(null);
-  const email = useRef<HTMLInputElement | null>(null);
-  const password = useRef<HTMLInputElement | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const name = useRef<HTMLInputElement>(null);
+  const email = useRef<HTMLInputElement>(null);
+  const password = useRef<HTMLInputElement>(null);
   const dispatch = useDispatch();
 
   const searchParams = useSearchParams();
@@ -29,15 +31,23 @@ const Account = () => {
     event: SyntheticEvent<HTMLFormElement, SubmitEvent>
   ) => {
     event.preventDefault();
+
+    const message = checkValidData(
+      email.current!.value,
+      password.current!.value
+    );
+    setErrorMessage(message);
+    if (errorMessage) return;
+
     if (!logInForm) {
       createUserWithEmailAndPassword(
         auth,
-        email.current.value,
-        password.current.value
+        email.current!.value,
+        password.current!.value
       ).then((userCredential) => {
         const user = userCredential.user;
         updateProfile(user, {
-          displayName: name.current.value,
+          displayName: name.current!.value,
         }).then(() => {
           const { uid, email, displayName } = auth.currentUser;
           dispatch(
@@ -52,12 +62,12 @@ const Account = () => {
     } else {
       signInWithEmailAndPassword(
         auth,
-        email.current.value,
-        password.current.value
+        email.current!.value,
+        password.current!.value
       )
         .then((userCredential) => {})
         .catch((error) => {
-          console.log(error);
+          setErrorMessage("Adresa de e-mail sau parola introdusa este gresita");
         });
     }
   };
@@ -95,6 +105,7 @@ const Account = () => {
           className="w-full rounded-md p-2 m-2 border border-black/50"
           ref={password}
         />
+        <p className="text-red-500 font-bold text-sm py-2">{errorMessage}</p>
         <button
           type="submit"
           className="w-full rounded-md p-2 m-2 border border-black/50 bg-gray-100 hover:bg-gray-200"
