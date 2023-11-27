@@ -5,7 +5,7 @@ const useOutsideClick = (
   setShowMenu: React.Dispatch<React.SetStateAction<boolean>>
 ) => {
   useEffect(() => {
-    function handleClickOutside(event) {
+    function handleClickOutside(event: any) {
       if (ref.current && !ref.current.contains(event.target)) {
         setShowMenu(false);
       }
