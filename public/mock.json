@@ -287,6 +287,33 @@
           "price": 590
         }
       ]
+    },
+    {
+      "id": "12",
+      "title": "Concert Aniversar de Craciun Stefan Banica",
+      "artist": "Stefan Banica",
+      "date": {
+        "day": "16 decembrie",
+        "weekday": "sambata",
+        "time": "19:00"
+      },
+      "address": [
+        "Sala Polivalenta BT Arena",
+        "Strada Uzinei Electrice",
+        "Cluj Napoca"
+      ],
+      "description": "Sambata, 16 DECEMBRIE 2023, incepand cu ora 19:00, la Sala Polivalenta BTarena din Cluj-Napoca, are loc cea mai asteptata productie muzicala din Romania: CONCERTUL ANIVERSAR DE CRACIUN STEFAN BANICA - 20 DE ANI, un show impresionant de sunet, lumini si efecte grafice, ce aduce pe aceeasi scena magia Craciunului, cele mai indragite piese ale artistului si invitati speciali.",
+      "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/52/40/00000236852-f35b-506x716-bmm-e031d72c.jpg",
+      "tickets": [
+        {
+          "name": "VIP 1",
+          "price": 300
+        },
+        {
+          "name": "MVP",
+          "price": 590
+        }
+      ]
     }
   ]
 }

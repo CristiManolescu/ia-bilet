@@ -12,6 +12,7 @@ interface EventProps {
   id: number;
   image: string;
   title: string;
+  tickets: { name: string; price: number }[];
 }
 
 interface EventState {

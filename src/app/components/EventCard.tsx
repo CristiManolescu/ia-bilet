@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import short from "../utils/shortTitle";
+import short from "../utils/stringShorter";
 
 interface ExportCardProps {
   image: string;
@@ -9,7 +9,7 @@ interface ExportCardProps {
 
 const EventCard = (props: ExportCardProps) => {
   const { image, title } = props;
-  const shortTitle = short(title);
+  const shortTitle = short(title, 30);
 
   return (
     <div className="py-4 mr-4">
