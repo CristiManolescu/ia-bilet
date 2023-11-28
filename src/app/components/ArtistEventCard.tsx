@@ -15,7 +15,9 @@ const ArtistEventCard = (props: ArtistEventCardProps) => {
   const { image, date, title, address, description, ticketPrice } = props;
   const fullDate = date.split(" ");
   const day = Number(fullDate[0]) < 10 ? "0" + fullDate[0] : fullDate[0];
-  const month = fullDate[1].slice(0, 3);
+  const month = fullDate[2]
+    ? fullDate[1].slice(0, 3) + fullDate[2]
+    : fullDate[1].slice(0, 3);
 
   return (
     <div className="flex gap-6 my-4">

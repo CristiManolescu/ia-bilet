@@ -16,7 +16,6 @@ This is a demo application that looks alike iabilet.ro
 - Multi Language Support (Română/English)
 - Dark mode
 - New Page component for each location event
-- New Page component for each artist (might use the same component for pages and artists)
 - Functional Search
 - Functional Cart
 - Responsivness
