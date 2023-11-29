@@ -3,7 +3,7 @@
 import React from "react";
 import useEvents from "../hooks/useEvents";
 import { useAppSelector } from "../redux/store";
-import EventCard from "./EventCard";
+import MainPageEventCard from "./MainPageEventCard";
 import Link from "next/link";
 import { IoTicket } from "react-icons/io5";
 
@@ -30,7 +30,7 @@ const MainPage = () => {
               query: { id: event.id },
             }}
           >
-            <EventCard image={event.image} title={event.title} />
+            <MainPageEventCard image={event.image} title={event.title} />
           </Link>
         ))}{" "}
       </div>

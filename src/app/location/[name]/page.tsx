@@ -1,16 +1,16 @@
 "use client";
-import React from "react";
-import Image from "next/image";
-import { useAppSelector } from "@/app/redux/store";
-import useEvents from "@/app/hooks/useEvents";
 import EventCard from "@/app/components/EventCard";
+import useEvents from "@/app/hooks/useEvents";
+import { useAppSelector } from "@/app/redux/store";
+import Image from "next/image";
+import React from "react";
 
-interface ArtistPageProps {
+interface LocationPagePageProps {
   params: { name: string };
 }
 
-const ArtistPage = ({ params }: ArtistPageProps) => {
-  const artistName = decodeURIComponent(params.name);
+const LocationPage = ({ params }: LocationPagePageProps) => {
+  const locationName = decodeURIComponent(params.name);
   useEvents();
   const events = useAppSelector((store) => store.event.allEvents);
   if (events.length === 0) return null;
@@ -27,13 +27,13 @@ const ArtistPage = ({ params }: ArtistPageProps) => {
         />
         <div className="absolute left-2 bottom-2">
           <h2 className="font-light text-2xl text-white">{`Bilete`}</h2>
-          <h1 className="font-bold text-4xl text-white">{artistName}</h1>
+          <h1 className="font-bold text-4xl text-white">{locationName}</h1>
         </div>
       </div>
       <div className="px-5">
-        <span className="py-5 text-sm">{`Poti cumpara bilete la ${artistName} direct de aici!`}</span>
+        <span className="py-5 text-sm">{`Poti cumpara bilete la ${locationName} direct de aici!`}</span>
         {events
-          .filter((event) => event.artist === artistName)
+          .filter((event) => event.address[0] === locationName)
           .map((event) => (
             <EventCard
               key={event.id}
@@ -51,4 +51,4 @@ const ArtistPage = ({ params }: ArtistPageProps) => {
   );
 };
 
-export default ArtistPage;
+export default LocationPage;

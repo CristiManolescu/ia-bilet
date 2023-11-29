@@ -61,7 +61,13 @@ const Page = ({ params }: Props) => {
             <FaLocationDot className="mr-4" />
             <div>
               <p>
-                {event.address[0]}, {event.address[2]}
+                <Link
+                  className="text-blue-500 hover:underline"
+                  href={`/location/${event.address[0]}`}
+                >
+                  {event.address[0]}
+                </Link>
+                , {event.address[2]}
               </p>
               <p>{event.address[1]}</p>
             </div>
