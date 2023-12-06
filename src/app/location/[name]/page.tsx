@@ -5,11 +5,11 @@ import { useAppSelector } from "@/app/redux/store";
 import Image from "next/image";
 import React from "react";
 
-interface LocationPagePageProps {
+interface LocationPageProps {
   params: { name: string };
 }
 
-const LocationPage = ({ params }: LocationPagePageProps) => {
+const LocationPage = ({ params }: LocationPageProps) => {
   const locationName = decodeURIComponent(params.name);
   useEvents();
   const events = useAppSelector((store) => store.event.allEvents);

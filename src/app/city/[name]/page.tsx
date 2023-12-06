@@ -4,11 +4,11 @@ import useEvents from "@/app/hooks/useEvents";
 import { useAppSelector } from "@/app/redux/store";
 import React from "react";
 
-interface CityPagePageProps {
+interface CityPageProps {
   params: { name: string };
 }
 
-const CityPage = ({ params }: CityPagePageProps) => {
+const CityPage = ({ params }: CityPageProps) => {
   const cityName = decodeURIComponent(params.name);
   useEvents();
   const events = useAppSelector((store) => store.event.allEvents);

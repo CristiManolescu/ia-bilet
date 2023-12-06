@@ -1,0 +1,52 @@
+{
+  "locations": [
+    {
+      "name": "Sala Palatului",
+      "address": "Strada Ion Câmpineanu, nr. 28",
+      "city": "Bucuresti",
+      "phone": "0213111149",
+      "lat": "44.439153",
+      "long": "26.095054"
+    },
+    {
+      "name": "Centrul Cultural Ion Besoiu",
+      "address": "str. Emil Cioran, nr. 1A",
+      "city": "Sibiu",
+      "phone": "0369 446 150",
+      "lat": "45.7899666",
+      "long": "24.14802"
+    },
+    {
+      "name": "Epava",
+      "address": "Plaja Costinesti",
+      "city": "Costinesti",
+      "phone": "0769 690 690",
+      "lat": "43.94757",
+      "long": "28.637429"
+    },
+    {
+      "name": "Casa de Cultura a Sindicatelor",
+      "address": "Bulevardul Alexandru Lăpușneanu 1",
+      "city": "Constanta",
+      "phone": "0241699066",
+      "lat": "44.1806903",
+      "long": "28.6350639"
+    },
+    {
+      "name": "Mina Museum Bucuresti",
+      "address": "Strada George Constantinescu 2-4",
+      "city": "Bucuresti",
+      "phone": "0753885500",
+      "lat": "44.479046",
+      "long": "26.117214"
+    },
+    {
+      "name": "Sala Polivalenta BT Arena",
+      "address": "Strada Uzinei Electrice",
+      "city": "Cluj Napoca",
+      "phone": "0264 483 160",
+      "lat": "46.767181",
+      "long": "23.570268"
+    }
+  ]
+}
