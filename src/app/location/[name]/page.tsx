@@ -1,8 +1,11 @@
 "use client";
 import EventCard from "@/app/components/EventCard";
+import LocationCard from "@/app/components/LocationCard";
 import useEvents from "@/app/hooks/useEvents";
+import useLocations from "@/app/hooks/useLocations";
 import { useAppSelector } from "@/app/redux/store";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface LocationPageProps {
@@ -12,7 +15,9 @@ interface LocationPageProps {
 const LocationPage = ({ params }: LocationPageProps) => {
   const locationName = decodeURIComponent(params.name);
   useEvents();
+  useLocations();
   const events = useAppSelector((store) => store.event.allEvents);
+  const locations = useAppSelector((store) => store.location.allLocations);
   if (events.length === 0) return null;
 
   return (
@@ -30,22 +35,40 @@ const LocationPage = ({ params }: LocationPageProps) => {
           <h1 className="font-bold text-4xl text-white">{locationName}</h1>
         </div>
       </div>
-      <div className="px-5">
-        <span className="py-5 text-sm">{`Poti cumpara bilete la ${locationName} direct de aici!`}</span>
-        {events
-          .filter((event) => event.address[0] === locationName)
-          .map((event) => (
-            <EventCard
-              key={event.id}
-              image={event.image}
-              title={event.title}
-              address={event.address}
-              description={event.description}
-              ticketPrice={event.tickets[0].price}
-              date={event.date.day}
-              id={event.id}
-            />
-          ))}
+      <div className="flex">
+        <div className="px-5">
+          <span className="py-5 text-sm">{`Poti cumpara bilete la ${locationName} direct de aici!`}</span>
+          {events
+            .filter((event) => event.address[0] === locationName)
+            .map((event) => (
+              <EventCard
+                key={event.id}
+                image={event.image}
+                title={event.title}
+                address={event.address}
+                description={event.description}
+                ticketPrice={event.tickets[0].price}
+                date={event.date.day}
+                id={event.id}
+              />
+            ))}
+        </div>
+        <div className="w-[40%]">
+          {locations
+            .filter((location) => location.name === locationName)
+            .map((location) => (
+              <LocationCard
+                key={location.name}
+                name={location.name}
+                address={location.address}
+                city={location.city}
+                phone={location.phone}
+                lat={location.lat}
+                long={location.long}
+                link={location.link}
+              />
+            ))}
+        </div>
       </div>
     </div>
   );

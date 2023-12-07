@@ -6,7 +6,8 @@
       "city": "Bucuresti",
       "phone": "0213111149",
       "lat": "44.439153",
-      "long": "26.095054"
+      "long": "26.095054",
+      "link": "https://maps.google.com/?q=Sala+Palatului&ftid=0x40b1ff45a8bf199f:0x8dbd974726bc9dc4"
     },
     {
       "name": "Centrul Cultural Ion Besoiu",
@@ -14,7 +15,8 @@
       "city": "Sibiu",
       "phone": "0369 446 150",
       "lat": "45.7899666",
-      "long": "24.14802"
+      "long": "24.14802",
+      "link": "https://maps.google.com/?cid=7324970875972492682"
     },
     {
       "name": "Epava",
@@ -22,7 +24,8 @@
       "city": "Costinesti",
       "phone": "0769 690 690",
       "lat": "43.94757",
-      "long": "28.637429"
+      "long": "28.637429",
+      "link": "https://maps.google.com/?q=Costine%C8%99ti+907090,+Romania&ftid=0x40bb274d7a3809b5:0x89fa5880e0dd6a74"
     },
     {
       "name": "Casa de Cultura a Sindicatelor",
@@ -30,7 +33,8 @@
       "city": "Constanta",
       "phone": "0241699066",
       "lat": "44.1806903",
-      "long": "28.6350639"
+      "long": "28.6350639",
+      "link": "https://maps.google.com/?cid=2451506712462635317"
     },
     {
       "name": "Mina Museum Bucuresti",
@@ -38,7 +42,8 @@
       "city": "Bucuresti",
       "phone": "0753885500",
       "lat": "44.479046",
-      "long": "26.117214"
+      "long": "26.117214",
+      "link": "https://test.com"
     },
     {
       "name": "Sala Polivalenta BT Arena",
@@ -46,7 +51,8 @@
       "city": "Cluj Napoca",
       "phone": "0264 483 160",
       "lat": "46.767181",
-      "long": "23.570268"
+      "long": "23.570268",
+      "link": "https://maps.google.com/?cid=12472001010446884412"
     }
   ]
 }

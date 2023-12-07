@@ -3,12 +3,14 @@ import { TypedUseSelectorHook, useSelector } from "react-redux";
 import eventReducer from "./eventSlice";
 import cartReducer from "./cartSlice";
 import userReducer from "./userSlice";
+import locationReducer from "./locationSlice";
 
 export const store = configureStore({
   reducer: {
     event: eventReducer,
     cart: cartReducer,
     user: userReducer,
+    location: locationReducer,
   },
 });
 
