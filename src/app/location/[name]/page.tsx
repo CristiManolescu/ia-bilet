@@ -5,7 +5,6 @@ import useEvents from "@/app/hooks/useEvents";
 import useLocations from "@/app/hooks/useLocations";
 import { useAppSelector } from "@/app/redux/store";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 interface LocationPageProps {

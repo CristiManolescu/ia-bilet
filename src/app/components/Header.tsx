@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import logo from "public/logo.png";
 import { menu } from "../utils/data";
@@ -19,6 +19,7 @@ const Header = () => {
   const router = useRouter();
   const dispatch = useDispatch();
   const user = useAppSelector((store) => store.user);
+  const search = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -43,6 +44,7 @@ const Header = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (search.current) router.push(`/search/${search.current.value}`);
   };
 
   return (
@@ -53,6 +55,7 @@ const Header = () => {
         </Link>
         <form className="relative" onSubmit={handleSubmit}>
           <input
+            ref={search}
             type="text"
             className="p-2 border border-black/20 w-[400px] text-sm rounded-md"
             placeholder="Cauta artist, trupa, locatie"
