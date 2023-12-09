@@ -15,8 +15,28 @@ const SearchPage = ({ params }: SearchPageProps) => {
   const events = useAppSelector((store) => store.event.allEvents);
   if (events.length === 0) return null;
 
-  console.log(searchQuery);
-  return <div className="page-template">{searchQuery}</div>;
+  return (
+    <div className="page-template py-4 px-5">
+      <h1 className="text-3xl font-bold py-4">{`Rezultatele cautarii dupa "${searchQuery}"`}</h1>
+      {events
+        .filter(
+          (event) =>
+            event.title.toLowerCase().search(searchQuery.toLowerCase()) !== -1
+        )
+        .map((event) => (
+          <EventCard
+            key={event.id}
+            image={event.image}
+            title={event.title}
+            address={event.address}
+            description={event.description}
+            ticketPrice={event.tickets[0].price}
+            date={event.date.day}
+            id={event.id}
+          />
+        ))}
+    </div>
+  );
 };
 
 export default SearchPage;

@@ -15,6 +15,5 @@ This is a demo application that looks alike iabilet.ro
 
 - Multi Language Support (Română/English)
 - Dark mode
-- Functional Search
 - Functional Cart
 - Responsivness
