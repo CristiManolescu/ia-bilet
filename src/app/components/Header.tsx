@@ -44,7 +44,11 @@ const Header = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (search.current) router.push(`/search/${search.current.value}`);
+    if (search.current!.value !== "") {
+      router.push(`/search/${search.current!.value}`);
+    } else {
+      // TODO: To implement if search box is empty
+    }
   };
 
   return (

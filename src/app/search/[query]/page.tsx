@@ -18,23 +18,30 @@ const SearchPage = ({ params }: SearchPageProps) => {
   return (
     <div className="page-template py-4 px-5">
       <h1 className="text-3xl font-bold py-4">{`Rezultatele cautarii dupa "${searchQuery}"`}</h1>
-      {events
-        .filter(
-          (event) =>
-            event.title.toLowerCase().search(searchQuery.toLowerCase()) !== -1
-        )
-        .map((event) => (
-          <EventCard
-            key={event.id}
-            image={event.image}
-            title={event.title}
-            address={event.address}
-            description={event.description}
-            ticketPrice={event.tickets[0].price}
-            date={event.date.day}
-            id={event.id}
-          />
-        ))}
+      {events.filter(
+        (event) =>
+          event.title.toLowerCase().search(searchQuery.toLowerCase()) !== -1
+      ).length > 0 ? (
+        events
+          .filter(
+            (event) =>
+              event.title.toLowerCase().search(searchQuery.toLowerCase()) !== -1
+          )
+          .map((event) => (
+            <EventCard
+              key={event.id}
+              image={event.image}
+              title={event.title}
+              address={event.address}
+              description={event.description}
+              ticketPrice={event.tickets[0].price}
+              date={event.date.day}
+              id={event.id}
+            />
+          ))
+      ) : (
+        <p className="text-sm">{`Ne pare rau, nu am gasit niciun rezultat pentru cautarea introdusa.`}</p>
+      )}
     </div>
   );
 };
