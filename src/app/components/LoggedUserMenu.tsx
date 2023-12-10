@@ -43,7 +43,7 @@ const LoggedUserMenu = () => {
                 <Link
                   key={menu}
                   href={{
-                    pathname: "account",
+                    pathname: "/account",
                     query: { action: menu },
                   }}
                   onClick={handleClick}
