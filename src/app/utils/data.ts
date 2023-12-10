@@ -15,3 +15,18 @@ export const accMenu = {
   notLogged: ["Intra in cont", "Cont nou"],
   logged: "Deconectare",
 } as const;
+
+export const languages = [
+  {
+    id: "ro",
+    name: "Română",
+  },
+  {
+    id: "en",
+    name: "English",
+  },
+  {
+    id: "fr",
+    name: "Français",
+  },
+];

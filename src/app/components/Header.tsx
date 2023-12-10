@@ -9,6 +9,7 @@ import { IoIosCart } from "react-icons/io";
 import { useAppSelector } from "../redux/store";
 import { onAuthStateChanged } from "firebase/auth"; // actiuni daca userul are sesiune activa
 import LoggedUserMenu from "./LoggedUserMenu";
+import LanguageMenu from "./LanguageMenu";
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
@@ -70,7 +71,7 @@ const Header = () => {
         </form>
         <div className="flex items-center gap-4 text-sm">
           <LoggedUserMenu />
-          <p>Limba</p>
+          <LanguageMenu />
           <Link href="/cart">
             <div className="relative flex">
               <IoIosCart className="text-2xl" />
