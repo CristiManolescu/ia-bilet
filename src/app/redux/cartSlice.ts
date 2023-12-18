@@ -1,9 +1,14 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-interface CartProps {
+export interface CartProps {
   eventName: string;
-  count: number;
-  count2: number;
+  ticket1: string;
+  ticket_price1: number;
+  ticket_count1: number;
+  ticket2: string;
+  ticket_price2: number;
+  ticket_count2: number;
+  totalTicketsCount: number;
 }
 
 interface CartState {

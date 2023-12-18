@@ -6,9 +6,10 @@ import { FaRegClock } from "react-icons/fa";
 import useEvents from "@/app/hooks/useEvents";
 import { useAppSelector } from "@/app/redux/store";
 import Image from "next/image";
-//import { useDispatch } from "react-redux";
-//import { addItem } from "@/app/redux/cartSlice";
+import { useDispatch } from "react-redux";
+import { addItem } from "@/app/redux/cartSlice";
 import Link from "next/link";
+import { CartProps } from "@/app/redux/cartSlice";
 
 interface Props {
   params: { name: string };
@@ -17,9 +18,9 @@ interface Props {
 const Page = ({ params }: Props) => {
   const [count, setCount] = useState<number>(0);
   const [count2, setCount2] = useState<number>(0);
-  //const [items, setItems] = useState<string[] | number[]>([]);
+  const [items, setItems] = useState<string[] | number[]>([]);
   const [allTickets, setAllTickets] = useState(0);
-  //const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const searchParams = useSearchParams();
   const id: any = searchParams.get("id");
 
@@ -32,22 +33,22 @@ const Page = ({ params }: Props) => {
 
   if (id !== null) event = events[id];
 
-  // const handleAdd = () => {
-  //   setItems([
-  //     {
-  //       eventName: eventName,
-  //       ticket1: event.tickets[0].name,
-  //       ticket_price1: event.tickets[0].price,
-  //       ticket_count1: count,
-  //       ticket2: event.tickets[1].name,
-  //       ticket_price2: event.tickets[1].price,
-  //       ticket_count2: count2,
-  //       totalTicketsCount: allTickets,
-  //     },
-  //   ]);
-  //   dispatch(addItem(items));
-  //   console.log(cart);
-  // };
+  const handleAdd = () => {
+    setItems([
+      {
+        eventName: eventName,
+        ticket1: event.tickets[0].name,
+        ticket_price1: event.tickets[0].price,
+        ticket_count1: count,
+        ticket2: event.tickets[1].name,
+        ticket_price2: event.tickets[1].price,
+        ticket_count2: count2,
+        totalTicketsCount: allTickets,
+      },
+    ]);
+    dispatch(addItem(items));
+    console.log(cart);
+  };
 
   return (
     <div className="flex flex-col md:w-[60%] m-auto py-4 bg-white rounded-b-lg shadow-lg items-center md:items-stretch">
@@ -162,7 +163,7 @@ const Page = ({ params }: Props) => {
           <div className="py-2 pr-2 text-right">
             <button
               className="p-2 text-white bg-blue-600 border rounded-lg right-2 border-black/50"
-              // onClick={handleAdd}
+              onClick={handleAdd}
             >
               Adauga in cos
             </button>

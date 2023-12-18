@@ -16,7 +16,7 @@ import { useRouter } from "next/navigation";
 import { addUser, removeUser } from "../redux/userSlice";
 
 const Header = () => {
-  //  const cart = useAppSelector((store) => store.cart.cartItems);
+  const cart = useAppSelector((store) => store.cart.cartItems);
   const router = useRouter();
   const dispatch = useDispatch();
   const user = useAppSelector((store) => store.user);
@@ -77,7 +77,7 @@ const Header = () => {
               <IoIosCart className="text-2xl" />
 
               <p className="absolute right-0 p-[1px] text-xs text-white bg-red-600 rounded-full">
-                {/* {cart.length !== 0 && cart[0].totalTicketsCount} */}
+                {cart.length !== 0 && cart[0].totalTicketsCount}
               </p>
             </div>
           </Link>
