@@ -77,7 +77,7 @@ const Header = () => {
               <IoIosCart className="text-2xl" />
 
               <p className="absolute right-0 p-[1px] text-xs text-white bg-red-600 rounded-full">
-                {cart.length !== 0 && cart[0].totalTicketsCount}
+                {/* {cart.length !== 0 && cart[0].totalTicketsCount} */}
               </p>
             </div>
           </Link>

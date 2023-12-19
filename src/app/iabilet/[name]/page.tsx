@@ -9,7 +9,6 @@ import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { addItem } from "@/app/redux/cartSlice";
 import Link from "next/link";
-import { CartProps } from "@/app/redux/cartSlice";
 
 interface Props {
   params: { name: string };
@@ -18,7 +17,7 @@ interface Props {
 const Page = ({ params }: Props) => {
   const [count, setCount] = useState<number>(0);
   const [count2, setCount2] = useState<number>(0);
-  const [items, setItems] = useState<string[] | number[]>([]);
+  // const [items, setItems] = useState<string[] | number[]>([]);
   const [allTickets, setAllTickets] = useState(0);
   const dispatch = useDispatch();
   const searchParams = useSearchParams();
@@ -34,8 +33,8 @@ const Page = ({ params }: Props) => {
   if (id !== null) event = events[id];
 
   const handleAdd = () => {
-    setItems([
-      {
+    dispatch(
+      addItem({
         eventName: eventName,
         ticket1: event.tickets[0].name,
         ticket_price1: event.tickets[0].price,
@@ -44,10 +43,8 @@ const Page = ({ params }: Props) => {
         ticket_price2: event.tickets[1].price,
         ticket_count2: count2,
         totalTicketsCount: allTickets,
-      },
-    ]);
-    dispatch(addItem(items));
-    console.log(cart);
+      })
+    );
   };
 
   return (
