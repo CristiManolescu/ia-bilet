@@ -9,6 +9,7 @@ import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { addItem } from "@/app/redux/cartSlice";
 import Link from "next/link";
+import TicketComponent from "@/app/components/TicketComponent";
 
 interface Props {
   params: { name: string };
@@ -17,7 +18,6 @@ interface Props {
 const Page = ({ params }: Props) => {
   const [count, setCount] = useState<number>(0);
   const [count2, setCount2] = useState<number>(0);
-  // const [items, setItems] = useState<string[] | number[]>([]);
   const [allTickets, setAllTickets] = useState(0);
   const dispatch = useDispatch();
   const searchParams = useSearchParams();
@@ -27,7 +27,6 @@ const Page = ({ params }: Props) => {
   let event: any;
   useEvents();
   const events = useAppSelector((store) => store.event.allEvents);
-  const cart = useAppSelector((store) => store.cart.cartItems);
   if (events.length === 0) return null;
 
   if (id !== null) event = events[id];
@@ -93,70 +92,13 @@ const Page = ({ params }: Props) => {
           <h1>Nr. bilete</h1>
         </div>
         <div className="flex flex-col font-light">
-          <div className="flex justify-between py-2">
-            <h2>{event.tickets[0].name}</h2>
-            <div className="flex justify-end">
-              <h2 className="pr-1">{event.tickets[0].price}</h2>
-              <h2>lei</h2>
-              <div className="mx-2">
-                <button
-                  className="px-2 text-white bg-blue-600 border rounded-l-lg border-black/50"
-                  onClick={() => {
-                    setCount(count - 1);
-                    setAllTickets(allTickets - 1);
-                  }}
-                >
-                  -
-                </button>
-                <input
-                  type="text"
-                  className="w-3 border border-black/50"
-                  value={count}
-                />
-                <button
-                  className="px-2 text-white bg-blue-600 border rounded-r-lg border-black/50"
-                  onClick={() => {
-                    setCount(count + 1);
-                    setAllTickets(allTickets + 1);
-                  }}
-                >
-                  +
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="flex justify-between">
-            <h2>{event.tickets[1].name}</h2>
-            <div className="flex justify-end">
-              <h2 className="pr-1">{event.tickets[1].price}</h2>
-              <h2>lei</h2>
-              <div className="mx-2">
-                <button
-                  className="px-2 text-white bg-blue-600 border rounded-l-lg border-black/50"
-                  onClick={() => {
-                    setCount2(count2 - 1);
-                    setAllTickets(allTickets - 1);
-                  }}
-                >
-                  -
-                </button>
-                <input
-                  type="text"
-                  className="w-3 border border-black/50"
-                  value={count2}
-                />
-                <button
-                  className="px-2 text-white bg-blue-600 border rounded-r-lg border-black/50"
-                  onClick={() => {
-                    setCount2(count2 + 1);
-                    setAllTickets(allTickets + 1);
-                  }}
-                >
-                  +
-                </button>
-              </div>
-            </div>
-          </div>
+          {event.tickets.map((ticket: { name: string; price: number }) => (
+            <TicketComponent
+              key={ticket.name}
+              name={ticket.name}
+              price={ticket.price}
+            />
+          ))}
           <div className="py-2 pr-2 text-right">
             <button
               className="p-2 text-white bg-blue-600 border rounded-lg right-2 border-black/50"
