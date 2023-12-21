@@ -1,13 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { useSearchParams } from "next/navigation";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaRegClock } from "react-icons/fa";
 import useEvents from "@/app/hooks/useEvents";
 import { useAppSelector } from "@/app/redux/store";
 import Image from "next/image";
-import { useDispatch } from "react-redux";
-import { addItem } from "@/app/redux/cartSlice";
+import { useRouter } from "next/navigation";
+
 import Link from "next/link";
 import TicketComponent from "@/app/components/TicketComponent";
 
@@ -16,12 +16,9 @@ interface Props {
 }
 
 const Page = ({ params }: Props) => {
-  const [count, setCount] = useState<number>(0);
-  const [count2, setCount2] = useState<number>(0);
-  const [allTickets, setAllTickets] = useState(0);
-  const dispatch = useDispatch();
   const searchParams = useSearchParams();
   const id: any = searchParams.get("id");
+  const router = useRouter();
 
   const eventName = decodeURIComponent(params.name);
   let event: any;
@@ -32,18 +29,7 @@ const Page = ({ params }: Props) => {
   if (id !== null) event = events[id];
 
   const handleAdd = () => {
-    dispatch(
-      addItem({
-        eventName: eventName,
-        ticket1: event.tickets[0].name,
-        ticket_price1: event.tickets[0].price,
-        ticket_count1: count,
-        ticket2: event.tickets[1].name,
-        ticket_price2: event.tickets[1].price,
-        ticket_count2: count2,
-        totalTicketsCount: allTickets,
-      })
-    );
+    router.push("/cart");
   };
 
   return (
@@ -97,6 +83,7 @@ const Page = ({ params }: Props) => {
               key={ticket.name}
               name={ticket.name}
               price={ticket.price}
+              eventName={eventName}
             />
           ))}
           <div className="py-2 pr-2 text-right">
@@ -104,7 +91,7 @@ const Page = ({ params }: Props) => {
               className="p-2 text-white bg-blue-600 border rounded-lg right-2 border-black/50"
               onClick={handleAdd}
             >
-              Adauga in cos
+              Cumpara bilete
             </button>
           </div>
         </div>

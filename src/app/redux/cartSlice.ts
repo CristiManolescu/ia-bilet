@@ -2,13 +2,8 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 interface CartProps {
   eventName: string;
-  ticket1: string;
-  ticket_price1: number;
-  ticket_count1: number;
-  ticket2: string;
-  ticket_price2: number;
-  ticket_count2: number;
-  totalTicketsCount: number;
+  ticketName: string;
+  ticketPrice: number;
 }
 [];
 
@@ -26,8 +21,11 @@ const cartSlice = createSlice({
       state.cartItems.push(action.payload);
       console.log(action.payload);
     },
+    removeItem: (state) => {
+      state.cartItems.pop();
+    },
   },
 });
 
-export const { addItem } = cartSlice.actions;
+export const { addItem, removeItem } = cartSlice.actions;
 export default cartSlice.reducer;
