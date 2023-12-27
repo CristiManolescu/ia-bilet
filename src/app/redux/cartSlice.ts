@@ -4,6 +4,7 @@ interface CartProps {
   eventName: string;
   ticketName: string;
   ticketPrice: number;
+  count: number;
 }
 [];
 

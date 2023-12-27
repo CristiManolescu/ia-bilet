@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addItem } from "../redux/cartSlice";
+import ticketAction from "../utils/ticketAction";
 
 interface TicketComponentProsp {
   name: string;
@@ -36,12 +37,14 @@ const TicketComponent = ({ name, price, eventName }: TicketComponentProsp) => {
           <button
             className="px-2 text-white bg-blue-600 border rounded-r-lg border-black/50"
             onClick={() => {
+              let ticketsCount = ticketAction("add", count);
               setCount(count + 1);
               dispatch(
                 addItem({
                   eventName,
                   ticketName: name,
                   ticketPrice: price,
+                  count: ticketsCount,
                 })
               );
             }}
