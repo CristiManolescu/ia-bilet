@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addItem } from "../redux/cartSlice";
-import ticketAction from "../utils/ticketAction";
+import { addItem, removeItem } from "../redux/cartSlice";
 
 interface TicketComponentProsp {
   name: string;
@@ -24,6 +23,15 @@ const TicketComponent = ({ name, price, eventName }: TicketComponentProsp) => {
             className="px-2 text-white bg-blue-600 border rounded-l-lg border-black/50"
             onClick={() => {
               if (count > 0) setCount(count - 1);
+              dispatch(
+                removeItem({
+                  id: name + price,
+                  eventName,
+                  ticketName: name,
+                  ticketPrice: price,
+                  quantity: 0,
+                })
+              );
             }}
           >
             -
@@ -37,14 +45,14 @@ const TicketComponent = ({ name, price, eventName }: TicketComponentProsp) => {
           <button
             className="px-2 text-white bg-blue-600 border rounded-r-lg border-black/50"
             onClick={() => {
-              let ticketsCount = ticketAction("add", count);
               setCount(count + 1);
               dispatch(
                 addItem({
+                  id: name + price,
                   eventName,
                   ticketName: name,
                   ticketPrice: price,
-                  count: ticketsCount,
+                  quantity: 0,
                 })
               );
             }}

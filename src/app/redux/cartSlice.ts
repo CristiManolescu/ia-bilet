@@ -1,10 +1,11 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice, current } from "@reduxjs/toolkit";
 
 interface CartProps {
+  id: string;
   eventName: string;
   ticketName: string;
   ticketPrice: number;
-  count: number;
+  quantity: number;
 }
 [];
 
@@ -19,11 +20,27 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addItem: (state, action: PayloadAction<CartProps>) => {
-      state.cartItems.push(action.payload);
-      console.log(action.payload);
+      const itemInCart = state.cartItems.find(
+        (item) => item.id === action.payload.id
+      );
+      if (itemInCart) {
+        itemInCart.quantity++;
+      } else {
+        state.cartItems.push({ ...action.payload, quantity: 1 });
+      }
     },
-    removeItem: (state) => {
-      state.cartItems.pop();
+    removeItem: (state, action: PayloadAction<CartProps>) => {
+      const item = state.cartItems.find(
+        (item) => item.id === action.payload.id
+      );
+      const removeItem = state.cartItems.filter(
+        (item) => item.id !== action.payload.id
+      );
+      if (item?.quantity === 1) {
+        state.cartItems = removeItem;
+      } else {
+        item!.quantity--;
+      }
     },
   },
 });
