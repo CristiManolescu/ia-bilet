@@ -30,16 +30,16 @@ const cartSlice = createSlice({
       }
     },
     removeItem: (state, action: PayloadAction<CartProps>) => {
-      const item = state.cartItems.find(
+      const itemInCart = state.cartItems.find(
         (item) => item.id === action.payload.id
       );
       const removeItem = state.cartItems.filter(
         (item) => item.id !== action.payload.id
       );
-      if (item?.quantity === 1) {
+      if (itemInCart?.quantity === 1) {
         state.cartItems = removeItem;
       } else {
-        item!.quantity--;
+        itemInCart!.quantity--;
       }
     },
   },
