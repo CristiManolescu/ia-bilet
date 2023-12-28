@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import logo from "public/logo.png";
 import { menu } from "../utils/data";
@@ -19,8 +19,8 @@ const Header = () => {
   const cart = useAppSelector((store) => store.cart.cartItems);
   const router = useRouter();
   const dispatch = useDispatch();
-  const user = useAppSelector((store) => store.user);
   const search = useRef<HTMLInputElement>(null);
+  const [ticketsNo, setTicketsNo] = useState<number>(0);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -42,6 +42,21 @@ const Header = () => {
 
     return () => unsubscribe();
   }, []);
+
+  useEffect(() => {
+    checkTicketsNo();
+  }, [cart]);
+
+  const checkTicketsNo = () => {
+    let tickets = 0;
+    if (cart.length > 0) {
+      for (let i = 0; i < cart.length; i++) {
+        console.log(cart[i].quantity);
+        tickets = tickets + cart[i].quantity;
+      }
+    }
+    setTicketsNo(tickets);
+  };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -76,9 +91,11 @@ const Header = () => {
             <div className="relative flex">
               <IoIosCart className="text-2xl" />
 
-              <p className="absolute right-0 p-[1px] text-xs text-white bg-red-600 rounded-full">
-                {/* {cart.length !== 0 && cart[0].totalTicketsCount} */}
-              </p>
+              {ticketsNo > 0 && (
+                <p className="absolute right-0 p-[1px] text-xs text-white bg-red-600 rounded-full">
+                  {ticketsNo}
+                </p>
+              )}
             </div>
           </Link>
         </div>

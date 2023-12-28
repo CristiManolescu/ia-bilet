@@ -39,7 +39,7 @@ const cartSlice = createSlice({
       if (itemInCart?.quantity === 1) {
         state.cartItems = removeItem;
       } else {
-        itemInCart!.quantity--;
+        if (itemInCart) itemInCart.quantity--;
       }
     },
   },
