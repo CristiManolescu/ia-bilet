@@ -51,7 +51,6 @@ const Header = () => {
     let tickets = 0;
     if (cart.length > 0) {
       for (let i = 0; i < cart.length; i++) {
-        console.log(cart[i].quantity);
         tickets = tickets + cart[i].quantity;
       }
     }
