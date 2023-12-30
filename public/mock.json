@@ -64,11 +64,11 @@
       "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/64/5e/00000243321-8cdd-506x716-bmm-00b0aed4.jpg",
       "tickets": [
         {
-          "name": "VIP 1",
+          "name": "Bilet",
           "price": 300
         },
         {
-          "name": "MVP",
+          "name": "Bilet 2",
           "price": 590
         }
       ]
@@ -87,11 +87,11 @@
       "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/3c/02/00000241736-035a-506x716-bmm-b5c353b5.png",
       "tickets": [
         {
-          "name": "VIP 1",
+          "name": "Test",
           "price": 300
         },
         {
-          "name": "MVP",
+          "name": "Brenciu VIP",
           "price": 590
         }
       ]
@@ -110,11 +110,11 @@
       "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/4e/8b/00000234675-203d-800x800-n-705c0d03.jpg",
       "tickets": [
         {
-          "name": "VIP 1",
+          "name": "VIP VIP",
           "price": 300
         },
         {
-          "name": "MVP",
+          "name": "Selly Ticket",
           "price": 590
         }
       ]
@@ -133,11 +133,11 @@
       "image": "https://static.iabilet.ro/img/auto_resized/db/event/01/5e/c6/00000237356-561f-800x800-n-a65658a4.jpg",
       "tickets": [
         {
-          "name": "VIP 1",
+          "name": "Tests",
           "price": 300
         },
         {
-          "name": "MVP",
+          "name": "Another",
           "price": 590
         }
       ]

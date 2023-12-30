@@ -3,13 +3,13 @@ import { useDispatch } from "react-redux";
 import { addItem, removeItem } from "../redux/cartSlice";
 import { useAppSelector } from "../redux/store";
 
-interface TicketComponentProsp {
+interface TicketComponentProps {
   name: string;
   price: number;
   eventName: string;
 }
 
-const TicketComponent = ({ name, price, eventName }: TicketComponentProsp) => {
+const TicketComponent = ({ name, price, eventName }: TicketComponentProps) => {
   const [count, setCount] = useState<number>(0);
   const dispatch = useDispatch();
   const cart = useAppSelector((store) => store.cart.cartItems);
@@ -32,7 +32,7 @@ const TicketComponent = ({ name, price, eventName }: TicketComponentProsp) => {
         <h2 className="pr-1">{`${price} lei`}</h2>
         <div className="mx-2">
           <button
-            className="px-2 text-white bg-blue-600 border rounded-l-lg border-black/50"
+            className="px-2 text-white bg-blue-600 border rounded-l-lg border-black/50 hover:bg-blue-500"
             onClick={() => {
               if (count > 0) setCount(count - 1);
               dispatch(
@@ -55,7 +55,7 @@ const TicketComponent = ({ name, price, eventName }: TicketComponentProsp) => {
             onChange={() => console.log()}
           />
           <button
-            className="px-2 text-white bg-blue-600 border rounded-r-lg border-black/50"
+            className="px-2 text-white bg-blue-600 border rounded-r-lg border-black/50 hover:bg-blue-500"
             onClick={() => {
               setCount(count + 1);
               dispatch(
@@ -67,7 +67,6 @@ const TicketComponent = ({ name, price, eventName }: TicketComponentProsp) => {
                   quantity: 0,
                 })
               );
-              console.log(cart);
             }}
           >
             +
