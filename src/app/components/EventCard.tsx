@@ -47,7 +47,7 @@ const EventCard = (props: EventCardProps) => {
       </div>
       <div className="flex flex-col w-[15%]">
         <Link href={`/iabilet/${title}?id=${id}`}>
-          <p className="text-white bg-blue-600 rounded-md p-2 text-lg font-bold text-center">{`ia bilet`}</p>
+          <p className="text-white bg-[#006ACA] rounded-md p-2 text-lg font-bold text-center hover:bg-blue-500">{`ia bilet`}</p>
         </Link>
         <span>{`de la ${ticketPrice} lei`}</span>
       </div>

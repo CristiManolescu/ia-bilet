@@ -11,7 +11,7 @@ const OrderSummary = () => {
           <p>{`Cost total bilete:`}</p>
           <p>{`${ticketCost} lei`}</p>
         </div>
-        <button className="p-2 text-white bg-blue-600 border rounded-lg border-black/50 hover:bg-blue-500">
+        <button className="p-2 text-white bg-[#006ACA] rounded-lg hover:bg-blue-500">
           {`Plaseaza comanda`}
         </button>
       </div>

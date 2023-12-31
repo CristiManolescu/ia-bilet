@@ -88,7 +88,7 @@ const Page = ({ params }: Props) => {
           ))}
           <div className="py-2 pr-2 text-right">
             <button
-              className="p-2 text-white bg-blue-600 border rounded-lg right-2 border-black/50"
+              className="p-2 text-white bg-[#006ACA]  rounded-lg right-2 hover:bg-blue-500"
               onClick={handleAdd}
             >
               Cumpara bilete
