@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useAppSelector } from "../redux/store";
 
 const useGetSum = () => {
