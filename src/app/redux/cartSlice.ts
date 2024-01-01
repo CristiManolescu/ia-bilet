@@ -43,6 +43,9 @@ const cartSlice = createSlice({
         if (itemInCart) itemInCart.quantity--;
       }
     },
+    emptyCart: (state) => {
+      state.cartItems = initialState.cartItems;
+    },
     addError: (state) => {
       state.error = true;
     },
@@ -52,5 +55,6 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addItem, removeItem, addError, removeError } = cartSlice.actions;
+export const { addItem, removeItem, emptyCart, addError, removeError } =
+  cartSlice.actions;
 export default cartSlice.reducer;

@@ -7,30 +7,45 @@ import { FaCircleInfo } from "react-icons/fa6";
 import Link from "next/link";
 import useEvents from "../hooks/useEvents";
 import MainPageEventCard from "../components/MainPageEventCard";
+import { useDispatch } from "react-redux";
+import { emptyCart } from "../redux/cartSlice";
 
 const Cart = () => {
   const cart = useAppSelector((store) => store.cart.cartItems);
 
   useEvents();
   const events = useAppSelector((store) => store.event.allEvents);
+  const dispatch = useDispatch();
+
+  const handleEmpty = () => {
+    dispatch(emptyCart());
+  };
 
   return (
     <div className="flex flex-col md:w-[60%] m-auto py-4 bg-white rounded-b-lg shadow-lg items-center md:items-stretch px-2">
       <h1 className="text-2xl font-bold">Cosul meu</h1>
       {cart.length > 0 ? (
         <div className="flex items-start">
-          <div className="py-2 w-[70%] border rounded-lg m-2 p-2">
-            {cart.map((item) => (
-              <>
-                <h1 className="font-bold">{item.eventName}</h1>
-                <TicketComponent
-                  key={item.id}
-                  name={item.ticketName}
-                  price={item.ticketPrice}
-                  eventName={item.eventName}
-                />
-              </>
-            ))}
+          <div className="py-2 w-[70%] m-2 p-2">
+            <div className="border rounded-lg p-2">
+              {cart.map((item) => (
+                <>
+                  <h1 className="font-bold">{item.eventName}</h1>
+                  <TicketComponent
+                    key={item.id}
+                    name={item.ticketName}
+                    price={item.ticketPrice}
+                    eventName={item.eventName}
+                  />
+                </>
+              ))}
+            </div>
+            <button
+              className="bg-[#006ACA] text-white p-2 rounded-lg right-2 mt-2"
+              onClick={handleEmpty}
+            >
+              Goleste cosul
+            </button>
           </div>
           <OrderSummary />
         </div>

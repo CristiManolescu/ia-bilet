@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addItem, removeItem } from "../redux/cartSlice";
 import { useAppSelector } from "../redux/store";
-import { addError, removeError } from "../redux/cartSlice";
+import { removeError } from "../redux/cartSlice";
 
 interface TicketComponentProps {
   name: string;

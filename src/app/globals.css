@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .page-template {
-    @apply w-[60%] bg-white m-auto rounded-b-lg;
+  @apply w-[60%] bg-white m-auto rounded-b-lg;
 }
