@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useSearchParams } from "next/navigation";
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot, FaCircleInfo } from "react-icons/fa6";
 import { FaRegClock, FaShoppingCart } from "react-icons/fa";
 import useEvents from "@/app/hooks/useEvents";
 import { useAppSelector } from "@/app/redux/store";
@@ -46,7 +46,13 @@ const Page = ({ params }: Props) => {
     <div className="flex flex-col md:w-[60%] m-auto py-4 bg-white rounded-b-lg shadow-lg items-center md:items-stretch">
       <div className="flex pb-14">
         <div className="md:w-[30%] md:pl-4">
-          <Image src={event.image} alt="poster" width="245" height="347" />
+          <Image
+            src={event.image}
+            alt="poster"
+            width="245"
+            height="347"
+            className="rounded-md"
+          />
         </div>
         <div className="md:w-[70%] py-2 my-2 text-sm md:pr-32">
           <h1 className="text-3xl">{eventName}</h1>
@@ -83,7 +89,7 @@ const Page = ({ params }: Props) => {
         </div>
       </div>
       <div className="border border-black/40 w-[60%] m-auto text-black/80 rounded-lg shadow-lg p-2">
-        <div className="flex justify-between text-lg font-bold border-b-2">
+        <div className="flex justify-between text-lg font-bold border-b-2 p-2">
           <h1>Cumpara bilete</h1>
           <h1>Nr. bilete</h1>
         </div>
@@ -96,19 +102,21 @@ const Page = ({ params }: Props) => {
               eventName={eventName}
             />
           ))}
-          <div className="py-2 pr-2 text-right">
-            <button
-              className="p-2 text-white bg-[#006ACA]  rounded-lg right-2 hover:bg-blue-500"
-              onClick={handleAdd}
-            >
-              <p className="flex items-center">
-                <FaShoppingCart className="mr-2" /> Cumpara bilete
-              </p>
-            </button>
+          <div className="py-2 pr-2 flex flex-col justify-end">
+            <div className="flex justify-end">
+              <button
+                className="py-2 px-8 text-white bg-[#006ACA] rounded-lg hover:bg-blue-500 flex justify-center items-center relative"
+                onClick={handleAdd}
+              >
+                <p>Cumpara bilete</p>
+                <FaShoppingCart className="absolute left-2" />
+              </button>
+            </div>
             {error && (
-              <p className="text-sm py-1 text-red-600">
-                Adauga numarul de bilete dorit!
-              </p>
+              <div className="text-sm py-1 text-red-600 flex items-center justify-end gap-1">
+                <FaCircleInfo />
+                <p>Adauga numarul de bilete dorit!</p>
+              </div>
             )}
           </div>
         </div>

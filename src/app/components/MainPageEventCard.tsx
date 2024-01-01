@@ -18,7 +18,7 @@ const MainPageEventCard = (props: ExportCardProps) => {
         alt={title}
         width="145"
         height="200"
-        className="transform hover:scale-105"
+        className="transform hover:scale-105 rounded-md"
       />
       <h1 className="w-[145px] font-bold text-gray-700">{shortTitle}</h1>
     </div>

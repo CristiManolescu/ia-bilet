@@ -27,7 +27,7 @@ const TicketComponent = ({ name, price, eventName }: TicketComponentProps) => {
   };
 
   return (
-    <div className="flex justify-between py-2">
+    <div className="flex justify-between py-2 pl-2">
       <div className="flex w-full justify-between">
         <h2 className="font-bold">{name}</h2>
         <h2 className="pr-1 font-bold">{`${price} lei`}</h2>
