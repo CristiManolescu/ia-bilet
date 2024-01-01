@@ -10,10 +10,10 @@ This is a demo application that looks alike iabilet.ro
 - Login/Sign up system using Firebase
 - Mock Data: Events, Locations
 - Form validation for login and sign up
+- eCommerce mock system
 
 ### To Do
 
 - Multi Language Support (Română/English)
 - Dark mode
-- Functional Cart
 - Responsivness

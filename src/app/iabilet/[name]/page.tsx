@@ -2,7 +2,7 @@
 import React from "react";
 import { useSearchParams } from "next/navigation";
 import { FaLocationDot } from "react-icons/fa6";
-import { FaRegClock } from "react-icons/fa";
+import { FaRegClock, FaShoppingCart } from "react-icons/fa";
 import useEvents from "@/app/hooks/useEvents";
 import { useAppSelector } from "@/app/redux/store";
 import Image from "next/image";
@@ -10,6 +10,10 @@ import { useRouter } from "next/navigation";
 
 import Link from "next/link";
 import TicketComponent from "@/app/components/TicketComponent";
+import { addError } from "@/app/redux/cartSlice";
+import { useDispatch } from "react-redux";
+// import { useTranslation } from "react-i18next";
+// import { translations } from "@/app/locales/translations";
 
 interface Props {
   params: { name: string };
@@ -19,6 +23,11 @@ const Page = ({ params }: Props) => {
   const searchParams = useSearchParams();
   const id: any = searchParams.get("id");
   const router = useRouter();
+  const dispatch = useDispatch();
+
+  const cart = useAppSelector((store) => store.cart.cartItems);
+  const error = useAppSelector((store) => store.cart.error);
+  // const { t } = useTranslation();
 
   const eventName = decodeURIComponent(params.name);
   let event: any;
@@ -29,7 +38,8 @@ const Page = ({ params }: Props) => {
   if (id !== null) event = events[id];
 
   const handleAdd = () => {
-    router.push("/cart");
+    const itemInCart = cart.find((item) => item.eventName === eventName);
+    itemInCart ? router.push("/cart") : dispatch(addError());
   };
 
   return (
@@ -91,8 +101,15 @@ const Page = ({ params }: Props) => {
               className="p-2 text-white bg-[#006ACA]  rounded-lg right-2 hover:bg-blue-500"
               onClick={handleAdd}
             >
-              Cumpara bilete
+              <p className="flex items-center">
+                <FaShoppingCart className="mr-2" /> Cumpara bilete
+              </p>
             </button>
+            {error && (
+              <p className="text-sm py-1 text-red-600">
+                Adauga numarul de bilete dorit!
+              </p>
+            )}
           </div>
         </div>
       </div>

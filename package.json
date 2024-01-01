@@ -11,9 +11,10 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
     "firebase": "^10.6.0",
-    "i18next": "^23.7.8",
+    "i18next": "^23.7.13",
     "i18next-browser-languagedetector": "^7.2.0",
     "next": "14.0.3",
+    "next-intl": "^3.4.0",
     "react": "^18",
     "react-dom": "^18",
     "react-i18next": "^13.5.0",

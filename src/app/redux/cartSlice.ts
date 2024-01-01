@@ -11,9 +11,10 @@ interface CartProps {
 
 interface CartState {
   cartItems: CartProps[];
+  error: boolean;
 }
 
-const initialState: CartState = { cartItems: [] };
+const initialState: CartState = { cartItems: [], error: false };
 
 const cartSlice = createSlice({
   name: "cart",
@@ -42,8 +43,14 @@ const cartSlice = createSlice({
         if (itemInCart) itemInCart.quantity--;
       }
     },
+    addError: (state) => {
+      state.error = true;
+    },
+    removeError: (state) => {
+      state.error = false;
+    },
   },
 });
 
-export const { addItem, removeItem } = cartSlice.actions;
+export const { addItem, removeItem, addError, removeError } = cartSlice.actions;
 export default cartSlice.reducer;
