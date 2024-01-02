@@ -115,7 +115,7 @@ const Page = ({ params }: Props) => {
             {error && (
               <div className="text-sm py-1 text-red-600 flex items-center justify-end gap-1">
                 <FaCircleInfo />
-                <p>Adauga numarul de bilete dorit!</p>
+                <p>Selecteaza numarul de bilete dorit!</p>
               </div>
             )}
           </div>
