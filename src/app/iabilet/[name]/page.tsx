@@ -12,8 +12,6 @@ import Link from "next/link";
 import TicketComponent from "@/app/components/TicketComponent";
 import { addError } from "@/app/redux/cartSlice";
 import { useDispatch } from "react-redux";
-// import { useTranslation } from "react-i18next";
-// import { translations } from "@/app/locales/translations";
 
 interface Props {
   params: { name: string };
@@ -27,7 +25,6 @@ const Page = ({ params }: Props) => {
 
   const cart = useAppSelector((store) => store.cart.cartItems);
   const error = useAppSelector((store) => store.cart.error);
-  // const { t } = useTranslation();
 
   const eventName = decodeURIComponent(params.name);
   let event: any;
@@ -44,7 +41,7 @@ const Page = ({ params }: Props) => {
 
   return (
     <div className="flex flex-col md:w-[60%] m-auto py-4 bg-white rounded-b-lg shadow-lg items-center md:items-stretch">
-      <div className="flex pb-14">
+      <div className="flex pb-14 flex-col md:flex-row items-center">
         <div className="md:w-[30%] md:pl-4">
           <Image
             src={event.image}
@@ -55,8 +52,8 @@ const Page = ({ params }: Props) => {
           />
         </div>
         <div className="md:w-[70%] py-2 my-2 text-sm md:pr-32">
-          <h1 className="text-3xl">{eventName}</h1>
-          <div className="flex my-6">
+          <h1 className="text-3xl text-center md:text-left">{eventName}</h1>
+          <div className="flex my-6 items-center justify-center md:justify-start">
             <FaLocationDot className="mr-4" />
             <div>
               <p>
@@ -71,7 +68,7 @@ const Page = ({ params }: Props) => {
               <p>{event.address[1]}</p>
             </div>
           </div>
-          <div className="flex my-6">
+          <div className="flex my-6 items-center justify-center md:justify-start">
             <FaRegClock className="mr-4" />
             <div>
               <p>
@@ -80,7 +77,7 @@ const Page = ({ params }: Props) => {
               </p>
             </div>
           </div>
-          <div>
+          <div className="m-2 md:m-0">
             <Link className="underline" href={`/artist/${event.artist}`}>
               {event.artist}
             </Link>{" "}
@@ -88,7 +85,7 @@ const Page = ({ params }: Props) => {
           </div>
         </div>
       </div>
-      <div className="border border-black/40 w-[60%] m-auto text-black/80 rounded-lg shadow-lg p-2">
+      <div className="border border-black/40 w-[95%] md:w-[60%] md:m-auto text-black/80 rounded-lg shadow-lg md:p-2">
         <div className="flex justify-between text-lg font-bold border-b-2 p-2">
           <h1>Cumpara bilete</h1>
           <h1>Nr. bilete</h1>

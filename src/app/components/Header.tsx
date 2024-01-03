@@ -68,7 +68,7 @@ const Header = () => {
 
   return (
     <header className="flex flex-col bg-white">
-      <div className="flex flex-col md:flex-row justify-between w-[60%] m-auto items-center py-10">
+      <div className="flex flex-col md:flex-row justify-between w-[60%] m-auto items-center py-10 gap-4">
         <Link href="/">
           <Image className="w-36" src={logo} alt="test" />
         </Link>
@@ -99,13 +99,13 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <div className="flex justify-center bg-gray-100">
+      <nav className="flex justify-center bg-gray-100">
         <ul className="flex flex-wrap gap-10">
           {menu.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
-      </div>
+      </nav>
     </header>
   );
 };

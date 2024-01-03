@@ -4,6 +4,6 @@
 
 @layer utilities {
   .page-template {
-    @apply w-[60%] bg-white m-auto rounded-b-lg;
+    @apply md:w-[60%] bg-white m-auto rounded-b-lg;
   }
 }
