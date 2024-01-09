@@ -76,14 +76,14 @@ const Account = () => {
     setLogInForm(!logInForm);
   };
   return (
-    <div className="flex flex-col justify-center items-center bg-white w-[60%] m-auto rounded-b-lg shadow-lg pt-4">
+    <div className="flex flex-col justify-center items-center bg-white md:w-[60%] m-auto rounded-b-lg shadow-lg pt-4">
       <h1 className="text-2xl font-bold">
         {" "}
         {logInForm ? "Logheaza-te" : "Inregistreaza-te"}
       </h1>
       <form
         onSubmit={handleSubmit}
-        className="w-[30%] m-auto flex flex-col justify-center items-center gap-y-2"
+        className="md:w-[30%] m-auto flex flex-col justify-center items-center gap-y-2"
       >
         {!logInForm && (
           <input
