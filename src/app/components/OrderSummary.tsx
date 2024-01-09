@@ -6,7 +6,7 @@ const OrderSummary = () => {
   const ticketCost = useGetSum();
   return (
     ticketCost > 0 && (
-      <div className="flex flex-col border rounded-lg w-[30%] p-2 m-2 gap-2">
+      <div className="flex flex-col border rounded-lg sm:w-[30%] p-2 md:m-2 gap-2 w-full">
         <h1 className="font-bold text-xl">{`Sumar comanda`}</h1>
         <div className="flex justify-between">
           <p>{`Cost total bilete:`}</p>
