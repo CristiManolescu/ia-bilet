@@ -49,7 +49,7 @@ const Account = () => {
         updateProfile(user, {
           displayName: name.current!.value,
         }).then(() => {
-          const { uid, email, displayName } = auth.currentUser;
+          const { uid, email, displayName } = auth.currentUser!;
           dispatch(
             addUser({
               uid: uid,
