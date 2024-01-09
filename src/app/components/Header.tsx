@@ -14,6 +14,7 @@ import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
 import { addUser, removeUser } from "../redux/userSlice";
+import { NavMobile } from "./NavMobile";
 
 const Header = () => {
   const cart = useAppSelector((store) => store.cart.cartItems);
@@ -99,8 +100,9 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <nav className="flex justify-center bg-gray-100">
-        <ul className="flex flex-wrap gap-10">
+      <nav className="flex bg-gray-100 justify-start md:justify-center">
+        <NavMobile />
+        <ul className="lg:flex flex-wrap gap-10 hidden">
           {menu.map((item) => (
             <li key={item}>{item}</li>
           ))}
