@@ -52,7 +52,7 @@ const LocationPage = ({ params }: LocationPageProps) => {
               />
             ))}
         </div>
-        <div className="w-[40%]">
+        <div className="w-[40%] hidden lg:block">
           {locations
             .filter((location) => location.name === locationName)
             .map((location) => (

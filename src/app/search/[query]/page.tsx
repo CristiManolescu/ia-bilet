@@ -17,7 +17,7 @@ const SearchPage = ({ params }: SearchPageProps) => {
 
   return (
     <div className="page-template py-4 px-5">
-      <h1 className="text-3xl font-bold py-4">{`Rezultatele cautarii dupa "${searchQuery}"`}</h1>
+      <h1 className="lg:text-3xl font-bold py-4">{`Rezultatele cautarii dupa "${searchQuery}"`}</h1>
       {events.filter(
         (event) =>
           event.title.toLowerCase().search(searchQuery.toLowerCase()) !== -1
