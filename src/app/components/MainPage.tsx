@@ -18,7 +18,7 @@ const MainPage = () => {
     <section className="flex flex-col">
       <div className="flex items-center">
         <IoTicket className="mr-1" />
-        <p className="text-lg font-light text-black/40" onClick={toggleTheme}>
+        <p className="text-lg font-light text-black/40">
           LIDER DE PIAȚĂ ÎN TICKETING. ACUM: {events.length} EVENIMENTE DIN 128
           ORAȘE
         </p>
