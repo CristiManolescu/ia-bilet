@@ -4,7 +4,7 @@
 
 @layer utilities {
   .page-template {
-    @apply md:w-[60%] bg-white m-auto rounded-b-lg p-5 shadow-lg;
+    @apply md:w-[60%] bg-white m-auto rounded-b-lg p-5 shadow-lg dark:bg-gray-500;
   }
 
   .main-header {
@@ -13,5 +13,11 @@
 
   .secondary-header {
     @apply font-light text-lg md:text-2xl text-white;
+  }
+}
+
+@layer base {
+  body {
+    @apply dark:bg-gray-900;
   }
 }

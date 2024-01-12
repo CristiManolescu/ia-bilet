@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+
 import Header from "./components/Header";
-import { ReduxProvider } from "./redux/provider";
 import Footer from "./components/Footer";
+
+import { ReduxProvider } from "./redux/provider";
+import ThemeContextProvider from "./context/ThemeContextProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,11 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-slate-300`}>
-        <ReduxProvider>
-          <Header />
-          {children}
-          <Footer />
-        </ReduxProvider>
+        <ThemeContextProvider>
+          <ReduxProvider>
+            <Header />
+            {children}
+            <Footer />
+          </ReduxProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );
