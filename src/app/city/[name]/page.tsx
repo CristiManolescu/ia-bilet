@@ -15,9 +15,9 @@ const CityPage = ({ params }: CityPageProps) => {
   if (events.length === 0) return null;
 
   return (
-    <div className="page-template pt-10">
-      <div className="px-5">
-        <span className="py-5 font-bold text-4xl">{`Bilete la concerte si evenimente in ${cityName}`}</span>
+    <div className="page-template">
+      <div>
+        <span className="main-header !text-black">{`Bilete la concerte si evenimente in ${cityName}`}</span>
         {events
           .filter((event) => event.address[2] === cityName)
           .map((event) => (

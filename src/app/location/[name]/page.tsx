@@ -30,8 +30,8 @@ const LocationPage = ({ params }: LocationPageProps) => {
           height="300"
         />
         <div className="absolute left-2 bottom-2">
-          <h2 className="font-light text-2xl text-white">{`Bilete`}</h2>
-          <h1 className="font-bold text-4xl text-white">{locationName}</h1>
+          <h2 className="secondary-header">{`Bilete`}</h2>
+          <h1 className="main-header">{locationName}</h1>
         </div>
       </div>
       <div className="flex">

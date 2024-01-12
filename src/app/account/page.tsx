@@ -76,7 +76,7 @@ const Account = () => {
     setLogInForm(!logInForm);
   };
   return (
-    <div className="flex flex-col justify-center items-center bg-white md:w-[60%] m-auto rounded-b-lg shadow-lg pt-4">
+    <div className="page-template flex flex-col justify-center items-center">
       <h1 className="text-2xl font-bold">
         {" "}
         {logInForm ? "Logheaza-te" : "Inregistreaza-te"}

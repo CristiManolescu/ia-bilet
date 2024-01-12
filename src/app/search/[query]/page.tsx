@@ -16,7 +16,7 @@ const SearchPage = ({ params }: SearchPageProps) => {
   if (events.length === 0) return null;
 
   return (
-    <div className="page-template py-4 px-5">
+    <div className="page-template">
       <h1 className="lg:text-3xl font-bold py-4">{`Rezultatele cautarii dupa "${searchQuery}"`}</h1>
       {events.filter(
         (event) =>

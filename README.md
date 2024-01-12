@@ -11,9 +11,11 @@ This is a demo application that looks alike iabilet.ro
 - Mock Data: Events, Locations
 - Form validation for login and sign up
 - eCommerce mock system
+- Responsive design
 
-### To Do
+### Under development
 
-- Multi Language Support (Română/English)
+- Multi Language Support (Română/English/Français)
 - Dark mode
-- Responsivness
+
+Demo application: https://ia-bilet.vercel.app/
