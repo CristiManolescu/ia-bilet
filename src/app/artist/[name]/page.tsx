@@ -16,7 +16,7 @@ const ArtistPage = ({ params }: ArtistPageProps) => {
   if (events.length === 0) return null;
 
   return (
-    <div className="page-template">
+    <div>
       <div className="relative">
         <Image
           className="w-full"

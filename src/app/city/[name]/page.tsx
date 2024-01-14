@@ -15,7 +15,7 @@ const CityPage = ({ params }: CityPageProps) => {
   if (events.length === 0) return null;
 
   return (
-    <div className="page-template">
+    <div>
       <div>
         <span className="main-header !text-black">{`Bilete la concerte si evenimente in ${cityName}`}</span>
         {events

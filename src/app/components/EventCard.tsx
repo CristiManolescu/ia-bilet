@@ -24,13 +24,21 @@ const EventCard = (props: EventCardProps) => {
   return (
     <div className="flex gap-6 my-4">
       <div className="w-[20%] md:w-[15%]">
-        <Image
-          src={image}
-          alt="poster"
-          width="130"
-          height="180"
-          className="rounded-lg"
-        />
+        <Link
+          key={title}
+          href={{
+            pathname: `/iabilet/${title}`,
+            query: { id },
+          }}
+        >
+          <Image
+            src={image}
+            alt="poster"
+            width="130"
+            height="180"
+            className="rounded-lg"
+          />
+        </Link>
       </div>
       <div className="flex w-[60%] md:w-[70%]">
         <div className="bg-gray-200 md:px-5 md:py-2 flex flex-col items-center mb-auto rounded-lg p-1">

@@ -40,7 +40,7 @@ const Page = ({ params }: Props) => {
   };
 
   return (
-    <div className="page-template flex flex-col items-center md:items-stretch">
+    <div className="flex flex-col items-center md:items-stretch">
       <div className="flex pb-14 flex-col md:flex-row items-center">
         <div className="md:w-[30%] md:pl-4">
           <Image

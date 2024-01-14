@@ -22,7 +22,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="page-template flex flex-col items-center md:items-stretch px-2">
+    <div className="flex flex-col items-center md:items-stretch px-2">
       <h1 className="text-2xl font-bold">Cosul meu</h1>
       {cart.length > 0 ? (
         <div className="flex items-start sm:flex-row flex-col-reverse">

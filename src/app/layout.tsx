@@ -27,7 +27,7 @@ export default function RootLayout({
         <ThemeContextProvider>
           <ReduxProvider>
             <Header />
-            {children}
+            <main className="page-template">{children}</main>
             <Footer />
           </ReduxProvider>
         </ThemeContextProvider>
