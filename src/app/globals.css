@@ -4,7 +4,7 @@
 
 @layer utilities {
   .page-template {
-    @apply md:w-[60%] bg-white m-auto rounded-b-lg p-5 shadow-lg dark:bg-gray-500;
+    @apply md:w-[60%] bg-white m-auto rounded-b-lg p-5 shadow-lg dark:bg-[#202020] dark:text-[#D3D3D3];
   }
 
   .main-header {
@@ -14,10 +14,24 @@
   .secondary-header {
     @apply font-light text-lg md:text-2xl text-white;
   }
-}
 
-@layer base {
-  body {
-    @apply dark:bg-gray-900;
+  .header-colors {
+    @apply bg-white dark:bg-[#202020] dark:text-[#D3D3D3];
+  }
+
+  .nav-colors {
+    @apply bg-gray-100 dark:bg-gray-500 dark:text-[#D3D3D3];
+  }
+
+  .layout-color {
+    @apply bg-slate-300 dark:bg-[#3f3f3f];
+  }
+
+  .main-page-text-color {
+    @apply text-gray-700 dark:text-[#D3D3D3];
+  }
+
+  .location-card-color {
+    @apply bg-gray-100 dark:bg-gray-500;
   }
 }

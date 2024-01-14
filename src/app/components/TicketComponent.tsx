@@ -52,7 +52,7 @@ const TicketComponent = ({ name, price, eventName }: TicketComponentProps) => {
         </button>
         <input
           type="text"
-          className="w-5 text-center"
+          className="w-5 text-center dark:bg-gray-700"
           value={count}
           onChange={() => console.log()}
         />

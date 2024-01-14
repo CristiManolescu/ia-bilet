@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-slate-300`}>
+      <body className={`${inter.className} layout-color`}>
         <ThemeContextProvider>
           <ReduxProvider>
             <Header />

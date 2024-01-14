@@ -85,7 +85,7 @@ const Page = ({ params }: Props) => {
           </div>
         </div>
       </div>
-      <div className="border border-black/40 w-[95%] md:w-[60%] md:m-auto text-black/80 rounded-lg shadow-lg md:p-2">
+      <div className="border border-black/40 w-[95%] md:w-[60%] md:m-auto main-page-text-color rounded-lg shadow-lg md:p-2 dark:bg-gray-700">
         <div className="flex justify-between text-lg font-bold border-b-2 p-2">
           <h1>Cumpara bilete</h1>
           <h1>Nr. bilete</h1>

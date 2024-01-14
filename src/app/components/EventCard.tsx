@@ -24,13 +24,7 @@ const EventCard = (props: EventCardProps) => {
   return (
     <div className="flex gap-6 my-4">
       <div className="w-[20%] md:w-[15%]">
-        <Link
-          key={title}
-          href={{
-            pathname: `/iabilet/${title}`,
-            query: { id },
-          }}
-        >
+        <Link href={`/iabilet/${title}?id=${id}`}>
           <Image
             src={image}
             alt="poster"
@@ -49,7 +43,7 @@ const EventCard = (props: EventCardProps) => {
         </div>
         <div className="mx-2">
           <h1 className="md:text-2xl text-lg font-normal">{title}</h1>
-          <span className="text-sm font-light text-gray-800">
+          <span className="text-sm font-light main-page-text-color">
             <Link className="hover:underline" href={`/location/${address[0]}`}>
               {address[0]}
             </Link>

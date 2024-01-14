@@ -22,7 +22,7 @@ const LocationCard = ({
   link,
 }: LocationCardProps) => {
   return (
-    <div className="text-sm bg-gray-100 mb-auto m-3">
+    <div className="text-sm location-card-color mb-auto m-3">
       <Link href={link}>
         <Image
           alt="google-maps"

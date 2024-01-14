@@ -20,7 +20,7 @@ const MainPageEventCard = (props: ExportCardProps) => {
         height="200"
         className="hover:scale-105 rounded-md"
       />
-      <h1 className="w-[145px] font-bold text-gray-700">{shortTitle}</h1>
+      <h1 className="w-[145px] font-bold main-page-text-color">{shortTitle}</h1>
     </div>
   );
 };

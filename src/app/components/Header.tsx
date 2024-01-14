@@ -6,6 +6,8 @@ import { menu } from "../utils/data";
 import Link from "next/link";
 import { CiSearch } from "react-icons/ci";
 import { IoIosCart } from "react-icons/io";
+import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
+
 import { useAppSelector } from "../redux/store";
 import { onAuthStateChanged } from "firebase/auth"; // actiuni daca userul are sesiune activa
 import LoggedUserMenu from "./LoggedUserMenu";
@@ -15,13 +17,17 @@ import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
 import { addUser, removeUser } from "../redux/userSlice";
 import { NavMobile } from "./NavMobile";
+import useTheme from "../hooks/useTheme";
 
 const Header = () => {
-  const cart = useAppSelector((store) => store.cart.cartItems);
-  const router = useRouter();
-  const dispatch = useDispatch();
-  const search = useRef<HTMLInputElement>(null);
   const [ticketsNo, setTicketsNo] = useState<number>(0);
+  const search = useRef<HTMLInputElement>(null);
+  const router = useRouter();
+
+  const cart = useAppSelector((store) => store.cart.cartItems);
+  const dispatch = useDispatch();
+
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -68,7 +74,7 @@ const Header = () => {
   };
 
   return (
-    <header className="flex flex-col bg-white">
+    <header className="flex flex-col header-colors">
       <div className="flex flex-col md:flex-row justify-between w-[60%] m-auto items-center py-10 gap-4">
         <Link href="/">
           <Image className="w-36" src={logo} alt="test" />
@@ -98,9 +104,12 @@ const Header = () => {
               )}
             </div>
           </Link>
+          <button className="text-2xl" onClick={toggleTheme}>
+            {theme === "light" ? <MdOutlineDarkMode /> : <MdOutlineLightMode />}
+          </button>
         </div>
       </div>
-      <nav className="flex bg-gray-100 justify-start md:justify-center">
+      <nav className="flex nav-colors justify-start md:justify-center">
         <NavMobile />
         <ul className="lg:flex flex-wrap gap-10 hidden">
           {menu.map((item) => (

@@ -12,10 +12,10 @@ This is a demo application that looks alike iabilet.ro
 - Form validation for login and sign up
 - eCommerce mock system
 - Responsive design
+- Dark mode
 
 ### Under development
 
 - Multi Language Support (Română/English/Français)
-- Dark mode
 
 Demo application: https://ia-bilet.vercel.app/
