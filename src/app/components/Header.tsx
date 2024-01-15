@@ -83,7 +83,7 @@ const Header = () => {
           <input
             ref={search}
             type="text"
-            className="p-2 border border-black/20 w-[400px] text-sm rounded-md"
+            className="p-2 border w-[400px] text-sm rounded-md search-bar-colors "
             placeholder="Cauta artist, trupa, locatie"
           />
           <button type="submit" className="absolute px-2 py-3 right-2">

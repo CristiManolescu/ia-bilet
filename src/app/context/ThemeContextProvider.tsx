@@ -16,12 +16,10 @@ const ThemeContextProvider = ({ children }: ThemeContextProviderProps) => {
   const [theme, setTheme] = useState<Theme>("light");
   const toggleTheme = () => {
     if (theme === "light") {
-      console.log("theme is now set to black");
       setTheme("dark");
       window.localStorage.setItem("theme", "dark");
       document.documentElement.classList.add("dark");
     } else {
-      console.log("theme is now set to white");
       setTheme("light");
       window.localStorage.setItem("theme", "light");
       document.documentElement.classList.remove("dark");

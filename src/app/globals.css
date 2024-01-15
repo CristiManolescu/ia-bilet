@@ -23,6 +23,10 @@
     @apply bg-gray-100 dark:bg-gray-500 dark:text-[#D3D3D3];
   }
 
+  .search-bar-colors {
+    @apply bg-white text-black dark:bg-[#202020] dark:text-[#D3D3D3];
+  }
+
   .layout-color {
     @apply bg-slate-300 dark:bg-[#3f3f3f];
   }
