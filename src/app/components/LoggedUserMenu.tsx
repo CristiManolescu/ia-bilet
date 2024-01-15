@@ -37,7 +37,7 @@ const LoggedUserMenu = () => {
       </div>
       <div ref={ref}>
         {showMenu && (
-          <ul className="absolute border border-black/70 p-1 rounded-lg shadow-lg">
+          <ul className="absolute border p-1 rounded-lg shadow-lg user-menu-colors">
             {user.displayName === null ? (
               accMenu?.notLogged?.map((menu) => (
                 <Link
@@ -48,7 +48,7 @@ const LoggedUserMenu = () => {
                   }}
                   onClick={handleClick}
                 >
-                  <li className=" hover:bg-gray-100">{menu}</li>
+                  <li className="hover:bg-gray-100">{menu}</li>
                 </Link>
               ))
             ) : (
