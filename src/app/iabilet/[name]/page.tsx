@@ -87,8 +87,8 @@ const Page = ({ params }: Props) => {
       </div>
       <div className="border border-black/40 w-[95%] md:w-[60%] md:m-auto main-page-text-color rounded-lg shadow-lg md:p-2 dark:bg-gray-700">
         <div className="flex justify-between text-lg font-bold border-b-2 p-2">
-          <h1>Cumpara bilete</h1>
-          <h1>Nr. bilete</h1>
+          <h1>{`Cumpără bilete`}</h1>
+          <h1>{`Nr. bilete`}</h1>
         </div>
         <div className="flex flex-col font-light">
           {event.tickets.map((ticket: { name: string; price: number }) => (
@@ -105,14 +105,14 @@ const Page = ({ params }: Props) => {
                 className="py-2 px-8 text-white bg-[#006ACA] rounded-lg hover:bg-blue-500 flex justify-center items-center relative"
                 onClick={handleAdd}
               >
-                <p>Cumpara bilete</p>
+                <p>{`Cumpără bilete`}</p>
                 <FaShoppingCart className="absolute left-2" />
               </button>
             </div>
             {error && (
               <div className="text-sm py-1 text-red-600 flex items-center justify-end gap-1">
                 <FaCircleInfo />
-                <p>Selecteaza numarul de bilete dorit!</p>
+                <p>{`Selectează numărul de bilete dorit!`}</p>
               </div>
             )}
           </div>

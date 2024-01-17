@@ -84,7 +84,7 @@ const Header = () => {
             ref={search}
             type="text"
             className="p-2 border w-[400px] text-sm rounded-md search-bar-colors "
-            placeholder="Cauta artist, trupa, locatie"
+            placeholder="Caută artist, trupă, locație"
           />
           <button type="submit" className="absolute px-2 py-3 right-2">
             <CiSearch />
@@ -92,7 +92,7 @@ const Header = () => {
         </form>
         <div className="flex items-center gap-4 text-sm">
           <LoggedUserMenu />
-          <LanguageMenu />
+          {/* <LanguageMenu /> */}
           <Link href="/cart">
             <div className="relative flex">
               <IoIosCart className="text-2xl" />

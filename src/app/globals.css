@@ -11,6 +11,10 @@
     @apply font-bold text-2xl md:text-4xl text-white;
   }
 
+  .main-header-black {
+    @apply font-bold text-2xl md:text-4xl dark:text-[#D3D3D3] text-black;
+  }
+
   .secondary-header {
     @apply font-light text-lg md:text-2xl text-white;
   }

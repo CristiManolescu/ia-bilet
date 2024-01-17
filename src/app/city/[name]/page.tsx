@@ -17,7 +17,7 @@ const CityPage = ({ params }: CityPageProps) => {
   return (
     <div>
       <div>
-        <span className="main-header !text-black">{`Bilete la concerte si evenimente in ${cityName}`}</span>
+        <span className="main-header-black">{`Bilete la concerte și evenimente în ${cityName}`}</span>
         {events
           .filter((event) => event.address[2] === cityName)
           .map((event) => (

@@ -1,6 +1,6 @@
 export const menu = [
-  "Orase",
-  "Locatii",
+  "Orașe",
+  "Locații",
   "Stiluri",
   "Festivaluri",
   "Teatru",
@@ -8,11 +8,11 @@ export const menu = [
   "Pentru copii",
   "Expo",
   "Sport",
-  "Conferinte",
+  "Conferințe",
 ] as const;
 
 export const accMenu = {
-  notLogged: ["Intra in cont", "Cont nou"],
+  notLogged: ["Intră în cont", "Cont nou"],
   logged: "Deconectare",
 } as const;
 

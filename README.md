@@ -13,6 +13,7 @@ This is a demo application that looks alike iabilet.ro
 - eCommerce mock system
 - Responsive design
 - Dark mode
+- Shimmer UI
 
 ### Under development
 

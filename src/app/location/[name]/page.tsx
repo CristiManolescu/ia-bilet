@@ -36,7 +36,7 @@ const LocationPage = ({ params }: LocationPageProps) => {
       </div>
       <div className="flex">
         <div className="px-5">
-          <span className="py-5 text-sm">{`Poti cumpara bilete la ${locationName} direct de aici!`}</span>
+          <span className="py-5 text-sm">{`Poți cumpăra bilete la ${locationName} direct de aici!`}</span>
           {events
             .filter((event) => event.address[0] === locationName)
             .map((event) => (

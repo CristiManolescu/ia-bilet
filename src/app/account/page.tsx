@@ -79,7 +79,7 @@ const Account = () => {
     <div className="flex flex-col justify-center items-center">
       <h1 className="text-2xl font-bold">
         {" "}
-        {logInForm ? "Logheaza-te" : "Inregistreaza-te"}
+        {logInForm ? "Intră în cont" : "Creează un cont"}
       </h1>
       <form
         onSubmit={handleSubmit}
@@ -89,36 +89,36 @@ const Account = () => {
           <input
             type="text"
             placeholder="Nume complet"
-            className="w-full rounded-md p-2 m-2 border border-black/50"
+            className="w-full rounded-md p-2 m-2 border border-black/30"
             ref={name}
           />
         )}
         <input
           type="text"
           placeholder="Adresa de e-mail"
-          className="w-full rounded-md p-2 m-2 border border-black/50"
+          className="w-full rounded-md p-2 m-2 border border-black/30"
           ref={email}
         />
         <input
           type="password"
           placeholder="Parola"
-          className="w-full rounded-md p-2 m-2 border border-black/50"
+          className="w-full rounded-md p-2 m-2 border border-black/30"
           ref={password}
         />
         <p className="text-red-500 font-bold text-sm py-2">{errorMessage}</p>
         <button
           type="submit"
-          className="w-full rounded-md p-2 m-2 border border-black/50 bg-gray-100 hover:bg-gray-200"
+          className="w-full rounded-md p-2 m-2 border border-black/30 bg-gray-100 hover:bg-gray-200 dark:text-black"
         >
           {logInForm ? "Conectaza-te" : "Inregistreaza-te"}
         </button>
         <p
-          className="text-sm cursor-pointer text-blue-500"
+          className="text-sm cursor-pointer text-blue-500 hover:underline"
           onClick={handleChangeForm}
         >
           {logInForm
-            ? "Nu ai un cont? Inregistreaza-te acum!"
-            : "Ai deja cont? Conecteaza-te acum!"}
+            ? "Nu ai un cont? Înregistrează-te acum!"
+            : "Ai deja cont? Conectează-te acum!"}
         </p>
       </form>
     </div>

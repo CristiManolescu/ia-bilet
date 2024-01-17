@@ -31,7 +31,7 @@ const ArtistPage = ({ params }: ArtistPageProps) => {
         </div>
       </div>
       <div className="px-5">
-        <span className="py-5 text-sm">{`Poti cumpara bilete la ${artistName} direct de aici!`}</span>
+        <span className="py-5 text-sm">{`Poți cumpăra bilete la ${artistName} direct de aici!`}</span>
         {events
           .filter((event) => event.artist === artistName)
           .map((event) => (

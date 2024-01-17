@@ -23,7 +23,7 @@ const Cart = () => {
 
   return (
     <div className="flex flex-col items-center md:items-stretch px-2">
-      <h1 className="text-2xl font-bold">Cosul meu</h1>
+      <h1 className="text-2xl font-bold">Coșul meu</h1>
       {cart.length > 0 ? (
         <div className="flex items-start sm:flex-row flex-col-reverse">
           <div className="sm:w-[70%] w-full m-2 p-2">
@@ -44,7 +44,7 @@ const Cart = () => {
               className="bg-[#006ACA] text-white p-2 rounded-lg right-2 mt-2"
               onClick={handleEmpty}
             >
-              Goleste cosul
+              Golește cosul
             </button>
           </div>
           <OrderSummary />
@@ -55,10 +55,10 @@ const Cart = () => {
             <span className="flex items-center pb-5">
               <FaCircleInfo />
               <p className="text-sm ml-2">
-                Cosul tau de cumparaturi nu contine bilete. Pentru a adauga
-                bilete in cos te rugam{" "}
+                Coșul tău de cumpărături nu conține bilete. Pentru a adăuga
+                bilete în coș te rugăm{" "}
                 <Link href="/" className="text-blue-600 hover:underline">
-                  sa te intorci pe pagina principala.
+                  să te întorci pe pagina principala.
                 </Link>
               </p>
             </span>
