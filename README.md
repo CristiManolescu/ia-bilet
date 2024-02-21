@@ -15,8 +15,4 @@ This is a demo application that looks alike iabilet.ro
 - Dark mode
 - Shimmer UI
 
-### Under development
-
-- Multi Language Support (Română/English/Français)
-
 Demo application: https://ia-bilet.vercel.app/
